@@ -69,6 +69,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["AutoSave.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\AutoSave.nvim",
+    url = "https://github.com/Pocco81/AutoSave.nvim"
+  },
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
@@ -104,10 +114,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["darkplus.nvim"] = {
+  ["dracula.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
-    url = "https://github.com/lunarvim/darkplus.nvim"
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,

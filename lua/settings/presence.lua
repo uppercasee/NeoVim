@@ -13,7 +13,7 @@ presence:setup{
 	debounce_timeout    = 10,
 	enable_line_number  = false,
 	blacklist           = {},
-	buttons             = true,
+	buttons             = false,
 	
 	-- Rich Presence text options
 	-- editing_text        = "Editing %s",
@@ -21,6 +21,6 @@ presence:setup{
 	-- git_commit_text     = "Committing changes",
 	-- plugin_manager_text = "Managing plugins",
 	-- reading_text        = "Reading %s",
-	-- workspace_text      = "Working on %s",
+	-- workspace_text      = "%s",
 	-- line_number_text    = "Line %s out of %s",
 }
