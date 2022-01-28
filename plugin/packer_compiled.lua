@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
@@ -133,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["nlsp-settings.nvim"] = {
     loaded = true,

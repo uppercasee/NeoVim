@@ -44,17 +44,20 @@ return require('packer').startup(function()
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+  use "kyazdani42/nvim-web-devicons" -- required for other plugins
 
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
-  
+  use "kyazdani42/nvim-tree.lua" -- File explorer
+
+  use "akinsho/bufferline.nvim" -- buffer
+  use "moll/vim-bbye" -- delete buffers
+
+  use "nvim-lualine/lualine.nvim" -- Status bar
+
+  use "akinsho/toggleterm.nvim" -- terminal
+
   use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
 
   -- use "ahmedkhalf/project.nvim"
@@ -71,6 +74,7 @@ return require('packer').startup(function()
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   -- use "lunarvim/darkplus.nvim"
   use 'Mofiqul/dracula.nvim'
+  use 'marko-cerovac/material.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -79,7 +83,7 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
-  -- use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
