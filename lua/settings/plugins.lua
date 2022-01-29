@@ -71,10 +71,11 @@ return require('packer').startup(function()
   use "andweeb/presence.nvim"
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use "lunarvim/darkplus.nvim"
-  use 'Mofiqul/dracula.nvim'
-  use 'marko-cerovac/material.nvim'
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/darkplus.nvim"
+  use "Mofiqul/dracula.nvim"
+  use "tanvirtin/monokai.nvim"
+  use "marko-cerovac/material.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

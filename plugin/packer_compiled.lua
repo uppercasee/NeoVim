@@ -119,6 +119,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  colorschemes = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorschemes",
+    url = "https://github.com/lunarvim/colorschemes"
+  },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
+    url = "https://github.com/lunarvim/darkplus.nvim"
+  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula.nvim",
@@ -143,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
+  },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\monokai.nvim",
+    url = "https://github.com/tanvirtin/monokai.nvim"
   },
   ["nlsp-settings.nvim"] = {
     loaded = true,
