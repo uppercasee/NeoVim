@@ -96,6 +96,10 @@ return require('packer').startup(function()
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+  -- for AutoCompletion
+  use {"ms-jpq/coq_nvim", branch ="coq"}
+  use {"ms-jpq/coq.artifacts", branch = "artifacts"}
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 

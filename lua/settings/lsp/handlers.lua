@@ -101,4 +101,13 @@ end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
+local status_ok, lspconfig = pcall(require, "lspconfig")
+if not status_ok then
+  return
+end
+
+lspconfig.clangd.setup{
+  capabilities = capabilities,
+}
+
 return M

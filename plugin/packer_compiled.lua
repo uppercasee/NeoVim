@@ -124,6 +124,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorschemes",
     url = "https://github.com/lunarvim/colorschemes"
   },
+  ["coq.artifacts"] = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coq.artifacts",
+    url = "https://github.com/ms-jpq/coq.artifacts"
+  },
+  coq_nvim = {
+    loaded = true,
+    path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coq_nvim",
+    url = "https://github.com/ms-jpq/coq_nvim"
+  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Acer\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",

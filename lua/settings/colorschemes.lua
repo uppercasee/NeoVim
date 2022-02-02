@@ -8,7 +8,7 @@ monokai.setup{}
 
 vim.cmd [[
 try
-  colorscheme monokai
+  colorscheme dracula
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
