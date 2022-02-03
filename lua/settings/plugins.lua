@@ -136,6 +136,9 @@ return require('packer').startup(function()
   -- symbols outline
   use "simrat39/symbols-outline.nvim"
 
+    -- lua with packer.nvim
+  use "max397574/better-escape.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

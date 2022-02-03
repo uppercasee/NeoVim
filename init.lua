@@ -24,6 +24,7 @@ local sources = {
     "configs.indentline",
     "configs.neoscroll",
     "configs.symbols_outline",
+    "configs.better_escape",
     "lsp",
   }
 
