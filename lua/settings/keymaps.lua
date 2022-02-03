@@ -79,3 +79,7 @@ keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
 -- Formatting
 keymap("n", "<Leader>r", ":lua vim.lsp.buf.formatting_sync()", opts)
+
+-- comments
+keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
+keymap("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
