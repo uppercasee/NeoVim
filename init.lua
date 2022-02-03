@@ -1,8 +1,10 @@
 local sources = {
+    -- settings
     "settings.options",
     "settings.plugins",
     "settings.colorschemes",
     "settings.keymaps",
+
     -- -- plugins
     "configs.cmp",
     "configs.telescope",
@@ -19,7 +21,7 @@ local sources = {
     "lsp",
   }
   
-  
+
   for _, source in ipairs(sources) do
     local status_ok, notok = pcall(require, source)
     if not status_ok then
