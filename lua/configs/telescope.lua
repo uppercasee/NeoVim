@@ -12,7 +12,7 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-    
+
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
