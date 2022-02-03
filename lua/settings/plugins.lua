@@ -72,6 +72,8 @@ return require('packer').startup(function()
 
   use "akinsho/toggleterm.nvim" -- terminal
 
+  use "karb94/neoscroll.nvim" -- Smooth scrolling plugin
+
   use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
 
   -- use "ahmedkhalf/project.nvim"
