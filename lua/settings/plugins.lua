@@ -77,7 +77,7 @@ return require('packer').startup(function()
   use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
 
   -- use "ahmedkhalf/project.nvim"
-  -- use "goolord/alpha-nvim"
+  use "goolord/alpha-nvim"
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   -- use "folke/which-key.nvim"
 

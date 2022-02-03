@@ -25,9 +25,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- NvimTreeToggle
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -63,6 +60,10 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- NvimTreeToggle
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", opts)
+
 -- Terminal --
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -71,8 +72,24 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
--- keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader>gt", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
+-- keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+
+-- Lspsaga
+keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+keymap("n", "ca", "<cmd>Lspsaga code_action<CR>", opts)
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap("n", "rn", "<cmd>Lspsaga rename<CR>", opts)
+keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
+keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
+keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>", opts)
+keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>", opts)
 
 -- Buffer Delete
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
@@ -83,3 +100,6 @@ keymap("n", "<Leader>r", ":lua vim.lsp.buf.formatting_sync()", opts)
 -- comments
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
+
+-- SymbolsOutline
+keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)

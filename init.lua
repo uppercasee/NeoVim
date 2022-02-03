@@ -7,6 +7,7 @@ local sources = {
     "settings.keymaps",
 
     -- -- plugins
+    "configs.alpha",
     "configs.cmp",
     "configs.telescope",
     "configs.autopairs",
