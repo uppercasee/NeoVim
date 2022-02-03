@@ -11,7 +11,7 @@ end
 require("lsp.lsp-installer")
 require("lsp.handlers").setup()
 require("lsp.lspsaga")
--- require("settings.lsp.null-ls")
+require("settings.lsp.null-ls")
 
 -- Automatically start coq
 vim.g.coq_settings = { auto_start = 'shut-up' }
