@@ -23,6 +23,7 @@ local sources = {
     "configs.toggleterm",
     "configs.indentline",
     "configs.neoscroll",
+    "configs.symbols_outline",
     "lsp",
   }
 
