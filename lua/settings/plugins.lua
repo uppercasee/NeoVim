@@ -54,7 +54,15 @@ return require('packer').startup(function()
   use "akinsho/bufferline.nvim" -- buffer
   use "moll/vim-bbye" -- delete buffers
 
-  use "nvim-lualine/lualine.nvim" -- Status bar
+   -- Statusline
+   use {
+    "nvim-lualine/lualine.nvim",
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    config = function()
+      require("configs.lualine").config()
+    end,
+    -- disable = not config.enabled.lualine,
+  }
 
   use "akinsho/toggleterm.nvim" -- terminal
 

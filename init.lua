@@ -1,17 +1,27 @@
-require("settings.options")
-require("settings.plugins")
-require("settings.colorschemes")
-require("settings.cmp")
-require("settings.lsp")
-require("settings.keymaps")
-require("settings.telescope")
-require("settings.autopairs")
-require("settings.gitsigns")
-require("settings.nvim-tree")
-require("settings.lualine")
-require("settings.presence")
-require("settings.bufferline")
-require("settings.comments")
-require("settings.autosave")
-require("settings.treesitter")
-require("settings.toggleterm")
+local sources = {
+    "settings.options",
+    "settings.plugins",
+    "settings.colorschemes",
+    "settings.keymaps",
+    -- -- plugins
+    "configs.cmp",
+    "configs.telescope",
+    "configs.autopairs",
+    "configs.gitsigns",
+    "configs.nvim-tree",
+    "configs.lualine",
+    "configs.presence",
+    "configs.bufferline",
+    "configs.comments",
+    "configs.autosave",
+    "configs.treesitter",
+    "configs.toggleterm",
+    "lsp",
+  }
+  
+  for _, source in ipairs(sources) do
+    local status_ok, notok = pcall(require, source)
+    if not status_ok then
+      error("Couldn't load " .. source .. "\n" .. notok)
+    end
+  end
