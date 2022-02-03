@@ -75,8 +75,6 @@ return require('packer').startup(function()
   use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
 
   -- use "ahmedkhalf/project.nvim"
-  -- use "lewis6991/impatient.nvim"
-  -- use "lukas-reineke/indent-blankline.nvim"
   -- use "goolord/alpha-nvim"
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   -- use "folke/which-key.nvim"
@@ -127,6 +125,8 @@ return require('packer').startup(function()
   -- colorizer
   use "norcalli/nvim-colorizer.lua"
 
+  -- indentline
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Git
   use "lewis6991/gitsigns.nvim"

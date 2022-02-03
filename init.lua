@@ -21,9 +21,9 @@ local sources = {
     "configs.autosave",
     "configs.treesitter",
     "configs.toggleterm",
+    "configs.indentline",
     "lsp",
   }
-  
 
   for _, source in ipairs(sources) do
     local status_ok, notok = pcall(require, source)
