@@ -11,6 +11,7 @@ local sources = {
     "configs.telescope",
     "configs.autopairs",
     "configs.filetype",
+    "configs.colorizer",
     "configs.gitsigns",
     "configs.nvim-tree",
     "configs.lualine",

@@ -124,6 +124,10 @@ return require('packer').startup(function()
   }
   -- use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- colorizer
+  use "norcalli/nvim-colorizer.lua"
+
+
   -- Git
   use "lewis6991/gitsigns.nvim"
 
