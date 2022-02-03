@@ -22,7 +22,7 @@ local sources = {
     "configs.treesitter",
     "configs.toggleterm",
     "configs.indentline",
-    "configs.neoscroll"
+    "configs.neoscroll",
     "lsp",
   }
 
