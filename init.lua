@@ -10,6 +10,7 @@ local sources = {
     "configs.cmp",
     "configs.telescope",
     "configs.autopairs",
+    "configs.filetype",
     "configs.gitsigns",
     "configs.nvim-tree",
     "configs.lualine",

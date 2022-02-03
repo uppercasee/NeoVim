@@ -59,6 +59,7 @@ return require('packer').startup(function()
   use "lewis6991/impatient.nvim" -- boost startup
   use "moll/vim-bbye" -- delete buffers
 
+  use "nathom/filetype.nvim" -- speed up startup time
    -- Statusline
    use {
     "nvim-lualine/lualine.nvim",
