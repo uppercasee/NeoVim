@@ -31,3 +31,5 @@ local sources = {
       error("Couldn't load " .. source .. "\n" .. notok)
     end
   end
+
+-- webdevicons currently not in use
