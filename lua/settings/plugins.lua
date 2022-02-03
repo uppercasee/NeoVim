@@ -122,7 +122,7 @@ return require('packer').startup(function()
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  -- use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- colorizer
   use "norcalli/nvim-colorizer.lua"
