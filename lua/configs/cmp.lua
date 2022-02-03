@@ -130,6 +130,9 @@ local kind_icons = {
       ghost_text = false,
       native_menu = false,
     },
+    completion = {
+        keyword_length = 1,
+    },
     cmp.setup.cmdline(':', {sources = {{ name = 'cmdline' }}}),
     cmp.setup.cmdline('/', {sources = {{ name = 'buffer' }}}),
   }
