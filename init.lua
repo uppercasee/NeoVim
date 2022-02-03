@@ -1,3 +1,4 @@
+require("settings.impatient")
 local sources = {
     -- settings
     "settings.options",

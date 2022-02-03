@@ -41,6 +41,10 @@ packer.init {
 -- Install your plugins here
 -- return packer.startup(function(use)
 return require('packer').startup(function()
+   config = {
+    -- Move to lua dir so impatient.nvim can cache it
+    compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+  }   
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
@@ -52,6 +56,7 @@ return require('packer').startup(function()
   use "kyazdani42/nvim-tree.lua" -- File explorer
 
   use "akinsho/bufferline.nvim" -- buffer
+  use "lewis6991/impatient.nvim" -- boost startup
   use "moll/vim-bbye" -- delete buffers
 
    -- Statusline
