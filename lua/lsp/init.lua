@@ -10,6 +10,7 @@ end
 
 require("lsp.lsp-installer")
 require("lsp.handlers").setup()
+require("lsp.lspsaga")
 -- require("settings.lsp.null-ls")
 
 -- Automatically start coq

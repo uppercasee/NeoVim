@@ -109,6 +109,7 @@ return require('packer').startup(function()
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "glepnir/lspsaga.nvim" -- lspsaga
 
   -- for AutoCompletion
   use {"ms-jpq/coq_nvim", branch ="coq"}
