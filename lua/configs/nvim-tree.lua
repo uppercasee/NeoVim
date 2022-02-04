@@ -38,8 +38,6 @@ vim.g.nvim_tree_icons = {
     hijack_netrw = true,
     open_on_setup = false,
     ignore_ft_on_setup = {
-      "startify",
-      "dashboard",
       "alpha",
     },
     auto_close = false,
