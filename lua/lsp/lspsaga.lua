@@ -1,12 +1,9 @@
-local M = {}
+local status_ok, lspsaga = pcall(require, "lspsaga")
+if not status_ok then
+return
+end
 
-function M.config()
-  local status_ok, lspsaga = pcall(require, "lspsaga")
-  if not status_ok then
-    return
-  end
-
-  lspsaga.setup {
+lspsaga.init_lsp_saga {
     debug = false,
     use_saga_diagnostic_sign = false,
     -- Diagnostics
@@ -14,7 +11,7 @@ function M.config()
     warn_sign = "",
     hint_sign = "",
     infor_sign = "",
-    diagnostic_header_icon = "   ",
+    dianostic_header_icon = "   ",
     -- Code actions
     code_action_icon = " ",
     code_action_prompt = {
@@ -46,8 +43,5 @@ function M.config()
     border_style = "round",
     rename_prompt_prefix = "➤ ",
     server_filetype_map = {},
-    diagnostic_prefix_format = "%d. ",
-  }
-end
-
-return M
+    -- dianostic_prefix_format = "%d. ",
+}

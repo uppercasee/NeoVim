@@ -1,32 +1,34 @@
 require("settings.impatient")
 local sources = {
     -- settings
-    "settings.options",
-    "settings.plugins",
     "settings.colorschemes",
     "settings.keymaps",
+    "settings.options",
+    "settings.plugins",
 
     -- -- plugins
     "configs.alpha",
-    "configs.cmp",
-    "configs.telescope",
     "configs.autopairs",
-    "configs.filetype",
-    "configs.colorizer",
-    "configs.gitsigns",
-    "configs.nvim-tree",
-    "configs.lualine",
-    "configs.presence",
-    "configs.bufferline",
-    "configs.comments",
     "configs.autosave",
-    "configs.treesitter",
-    "configs.toggleterm",
-    "configs.indentline",
-    "configs.neoscroll",
-    "configs.symbols_outline",
     "configs.better_escape",
-    "lsp",
+    "configs.bufferline",
+    "configs.cmp",
+    "configs.colorizer",
+    "configs.comments",
+    "configs.filetype",
+    "configs.gitsigns",
+    "configs.indentline",
+    "configs.lualine",
+    "configs.neoscroll",
+    "configs.nvim-tree",
+    "configs.presence",
+    "configs.symbols_outline",
+    "configs.telescope",
+    "configs.toggleterm",
+    "configs.treesitter",
+    "configs.trouble",
+    -- "configs.webdevicons", -- currently not in use
+    -- "lsp",
   }
 
   for _, source in ipairs(sources) do
@@ -36,4 +38,3 @@ local sources = {
     end
   end
 
--- webdevicons currently not in use
