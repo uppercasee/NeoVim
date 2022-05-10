@@ -5,6 +5,7 @@ local sources = {
     "settings.keymaps",
     "settings.options",
     "settings.plugins",
+    "settings.impatient",
 
     -- -- plugins
     "configs.alpha",
