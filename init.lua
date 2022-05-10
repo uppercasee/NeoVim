@@ -1,11 +1,10 @@
-require("settings.impatient")
+-- require("settings.impatient")
 local sources = {
     -- settings
     "settings.colorschemes",
     "settings.keymaps",
     "settings.options",
     "settings.plugins",
-    "settings.impatient",
 
     -- -- plugins
     "configs.alpha",
@@ -26,11 +25,11 @@ local sources = {
     "configs.symbols_outline",
     "configs.telescope",
     "configs.toggleterm",
-    "configs.treesitter",
+    -- "configs.treesitter",
     "configs.trouble",
-    -- "configs.webdevicons", -- currently not in use
+    "configs.webdevicons", -- currently not in use
     "configs.which-key",
-    -- "lsp",
+    "lsp",
   }
 
   for _, source in ipairs(sources) do
