@@ -29,6 +29,7 @@ local sources = {
     "configs.treesitter",
     "configs.trouble",
     -- "configs.webdevicons", -- currently not in use
+    "configs.which-key",
     -- "lsp",
   }
 

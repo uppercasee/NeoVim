@@ -79,7 +79,7 @@ return require('packer').startup(function()
   -- use "ahmedkhalf/project.nvim"
   use "goolord/alpha-nvim"
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  -- use "folke/which-key.nvim"
+  use "folke/which-key.nvim"
 
   -- discord rich preesence
   use "andweeb/presence.nvim"
