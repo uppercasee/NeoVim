@@ -125,7 +125,7 @@ return require('packer').startup(function()
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- WHICHKEY
-  -- use "folke/which-key.nvim"
+  use "folke/which-key.nvim"
 
   -- LSP
   -- use "neovim/nvim-lspconfig" -- enable LSP
@@ -133,10 +133,6 @@ return require('packer').startup(function()
   -- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   -- -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   -- use "glepnir/lspsaga.nvim" -- lspsaga
-  
-  -- for AutoCompletion
-  -- use {"ms-jpq/coq_nvim", branch ="coq"}
-  -- use {"ms-jpq/coq.artifacts", branch = "artifacts"}
 
   -- SYMBOLS OUTLINE (LSP)
   use "simrat39/symbols-outline.nvim"
@@ -146,9 +142,14 @@ return require('packer').startup(function()
   -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   
-  -- UNUSED PLUGINS
+  -- UNUSED PLUGINS --
+
   -- use "ahmedkhalf/project.nvim"
   -- use {"nvim-telescope/telescope-fzf-native.nvim", run = "make", cmd = "Telescope" }
+
+  -- for AutoCompletion
+  -- use {"ms-jpq/coq_nvim", branch ="coq"}
+  -- use {"ms-jpq/coq.artifacts", branch = "artifacts"}
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
