@@ -45,53 +45,24 @@ return require('packer').startup(function()
     -- Move to lua dir so impatient.nvim can cache it
     compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
   }   
-  -- My plugins here
+  -- PACKER AND ITS REQUIREMENTS
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "kyazdani42/nvim-web-devicons" -- required for other plugins
 
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-tree.lua" -- File explorer
-
-  use "akinsho/bufferline.nvim" -- buffer
+  -- BOOST SPEEDUPTIME
   use "lewis6991/impatient.nvim" -- boost startup
-  use "moll/vim-bbye" -- delete buffers
-
   use "nathom/filetype.nvim" -- speed up startup time
-   -- Statusline
-   use {
-    "nvim-lualine/lualine.nvim",
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function()
-      require("configs.lualine").config()
-    end,
-    -- disable = not config.enabled.lualine,
-  }
 
-  use "akinsho/toggleterm.nvim" -- terminal
-
-  use "karb94/neoscroll.nvim" -- Smooth scrolling plugin
-
-  use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
-
-  -- use "ahmedkhalf/project.nvim"
-  use "goolord/alpha-nvim"
-  -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
-
-  -- discord rich preesence
-  use "andweeb/presence.nvim"
-
-  -- Colorschemes
+  -- COLORSCHEMES PLUGINS
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "Mofiqul/dracula.nvim"
   use "tanvirtin/monokai.nvim"
   use "marko-cerovac/material.nvim"
-
-  -- cmp plugins
+  
+  -- CMP AUTOCOMPLETION PLUGINS
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
@@ -100,50 +71,85 @@ return require('packer').startup(function()
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
-  -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  -- OTHER PLUGINS
+  use "goolord/alpha-nvim" -- front page of neovim
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
 
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use "glepnir/lspsaga.nvim" -- lspsaga
+  use "max397574/better-escape.nvim"
+  
+  -- BUFFER
+  use "akinsho/bufferline.nvim" -- buffer
+  use "moll/vim-bbye" -- delete buffers
 
-  -- for AutoCompletion
-  use {"ms-jpq/coq_nvim", branch ="coq"}
-  use {"ms-jpq/coq.artifacts", branch = "artifacts"}
+  -- COLORIZER && COMMENT
+  use "norcalli/nvim-colorizer.lua"
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
-  -- Telescope
+  -- GIT
+  use "lewis6991/gitsigns.nvim"
+
+  -- INDENTLINE
+  use "lukas-reineke/indent-blankline.nvim"
+
+   -- STATUSLINE
+  use {
+  "nvim-lualine/lualine.nvim",
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  config = function()
+    require("configs.lualine").config()
+  end,
+  -- disable = not config.enabled.lualine,
+  }
+
+  use "karb94/neoscroll.nvim" -- Smooth scrolling plugin
+
+  -- FILE EXPLORER
+  use "kyazdani42/nvim-tree.lua"
+
+  -- DISCORD RICH PRESENCE
+  use "andweeb/presence.nvim"
+
+  -- TELESCOPE
   use "nvim-telescope/telescope.nvim"
-  use {"nvim-telescope/telescope-fzf-native.nvim", run = "make", cmd = "Telescope" }
-
-  -- Treesitter
+  
+  -- TERMINAL && TROUBLE
+  use "akinsho/toggleterm.nvim"
+  use "folke/trouble.nvim"
+  
+  -- TREESITTER
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-  -- colorizer
-  use "norcalli/nvim-colorizer.lua"
+  -- WHICHKEY
+  -- use "folke/which-key.nvim"
 
-  -- indentline
-  use "lukas-reineke/indent-blankline.nvim"
+  -- LSP
+  -- use "neovim/nvim-lspconfig" -- enable LSP
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  -- -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  -- use "glepnir/lspsaga.nvim" -- lspsaga
+  
+  -- for AutoCompletion
+  -- use {"ms-jpq/coq_nvim", branch ="coq"}
+  -- use {"ms-jpq/coq.artifacts", branch = "artifacts"}
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
-
-  -- symbols outline
+  -- SYMBOLS OUTLINE (LSP)
   use "simrat39/symbols-outline.nvim"
-
-    -- lua with packer.nvim
-  use "max397574/better-escape.nvim"
-
-    -- trouble
-    use "folke/trouble.nvim"
-
+  
+  -- SNIPPETS
+  -- use "L3MON4D3/LuaSnip" --snippet engine
+  -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  
+  -- UNUSED PLUGINS
+  -- use "ahmedkhalf/project.nvim"
+  -- use {"nvim-telescope/telescope-fzf-native.nvim", run = "make", cmd = "Telescope" }
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
