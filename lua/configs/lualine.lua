@@ -14,7 +14,7 @@ function M.config()
 		"diagnostics",
 		sources = { "nvim_diagnostic" },
 		sections = { "error", "warn", "info"},
-		symbols = { error = " ", warn = " ", info = " "},
+		symbols = {error = " ", warn = " ", info = " "},
 		-- symbols = { error = " ", warn = " ", info = " ", hint = " " },
 		-- symbols = { error = " ", warn = " " },
 		colored = false,
@@ -80,9 +80,9 @@ function M.config()
 	local config = {
 		options = {
 			icons_enabled = true,
-			theme = "dracula-nvim",
-			component_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
+			theme = "solarized_dark",
+		 section_separators = {left = '', right = ''},
+		 component_separators = {left = '', right = ''},
 			disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 			always_divide_middle = true,
 		},
@@ -108,9 +108,6 @@ function M.config()
 		tabline = {},
 		extensions = {},
 	}
-
-
-
 	lualine.setup(config)
 end
 
