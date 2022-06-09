@@ -7,8 +7,8 @@ presence:setup{
 	-- General options
 	auto_update         = true,
 	neovim_image_text   = "NeoVim",
-	main_image          = "file",
-	-- client_id           = "793271441293967371",
+	main_image          = "neovim",
+	-- client_id           = " ", -- not recommended
 	log_level           = nil,
 	debounce_timeout    = 10,
 	enable_line_number  = false,
