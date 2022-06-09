@@ -13,7 +13,7 @@ function M.config()
 	local diagnostics = {
 		"diagnostics",
 		sources = { "nvim_diagnostic" },
-		sections = { "error", "warn"},
+		sections = { "error", "warn", "info"},
 		symbols = { error = " ", warn = " ", info = " "},
 		-- symbols = { error = " ", warn = " ", info = " ", hint = " " },
 		-- symbols = { error = " ", warn = " " },
