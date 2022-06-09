@@ -138,9 +138,9 @@ return require('packer').startup(function()
   use "simrat39/symbols-outline.nvim"
   
   -- SNIPPETS
-  -- use "L3MON4D3/LuaSnip" --snippet engine
-  -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   
   -- UNUSED PLUGINS --
 
