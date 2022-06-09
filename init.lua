@@ -29,7 +29,7 @@ local sources = {
   "configs.trouble",
   "configs.webdevicons",
   "configs.which-key",
-  -- "lsp",
+  "lsp",
   }
 
   for _, source in ipairs(sources) do

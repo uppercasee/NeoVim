@@ -41,7 +41,7 @@ packer.init {
 -- Install your plugins here
 -- return packer.startup(function(use)
 return require('packer').startup(function()
-   config = {
+  config = {
     -- Move to lua dir so impatient.nvim can cache it
     compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
   }   
@@ -92,7 +92,7 @@ return require('packer').startup(function()
   -- INDENTLINE
   use "lukas-reineke/indent-blankline.nvim"
 
-   -- STATUSLINE
+  -- STATUSLINE
   use {
   "nvim-lualine/lualine.nvim",
   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -128,11 +128,11 @@ return require('packer').startup(function()
   use "folke/which-key.nvim"
 
   -- LSP
-  -- use "neovim/nvim-lspconfig" -- enable LSP
-  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  -- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  -- -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  -- use "glepnir/lspsaga.nvim" -- lspsaga
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "glepnir/lspsaga.nvim" -- lspsaga
 
   -- SYMBOLS OUTLINE (LSP)
   use "simrat39/symbols-outline.nvim"

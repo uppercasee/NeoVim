@@ -1,5 +1,3 @@
-
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -105,17 +103,17 @@ keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 -- EVERYTHING WITH LSP --
 
 -- LSP SAGA
--- keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
--- keymap("n", "ca", "<cmd>Lspsaga code_action<CR>", opts)
--- keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
--- keymap("n", "rn", "<cmd>Lspsaga rename<CR>", opts)
--- keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
--- keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
--- keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>", opts)
--- keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>", opts)
+keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+keymap("n", "ca", "<cmd>Lspsaga code_action<CR>", opts)
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap("n", "rn", "<cmd>Lspsaga rename<CR>", opts)
+keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
+keymap("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
+keymap("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>", opts)
+keymap("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>", opts)
 
 -- SYMBOLS OUTLINE
--- keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
+keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
 
 -- FORMATTING
--- keymap("n", "<Leader>r", ":lua vim.lsp.buf.formatting_sync()", opts)
+keymap("n", "<Leader>r", ":lua vim.lsp.buf.formatting_sync()", opts)

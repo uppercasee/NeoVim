@@ -10,12 +10,12 @@ local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	debug = false,
-	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-		formatting.black,
-		formatting.stylua,
-    diagnostics.flake8
-	},
+	-- sources = {
+	-- 	formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+	-- 	formatting.black,
+	-- 	formatting.stylua,
+    -- diagnostics.flake8
+	-- },
 	-- -- NOTE: You can remove this on attach function to disable format on save
     -- on_attach = function(client)
 	-- 	if client.resolved_capabilities.document_formatting then
