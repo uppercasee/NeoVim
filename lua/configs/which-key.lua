@@ -67,4 +67,4 @@ which_key.setup{
         i = { "j", "k" },
         v = { "j", "k" },
     },
-    }
+}
