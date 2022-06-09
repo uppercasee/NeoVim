@@ -10,7 +10,7 @@ end
 
 require("lsp.installer")
 require("lsp.lspsaga")
--- require("lsp.null-ls")
+require("lsp.null-ls")
 handlers.setup()
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
