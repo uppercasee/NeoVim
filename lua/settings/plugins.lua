@@ -55,12 +55,13 @@ return require('packer').startup(function()
   use "lewis6991/impatient.nvim" -- boost startup
   use "nathom/filetype.nvim" -- speed up startup time
 
-  -- COLORSCHEMES PLUGINS
+  -- COLORSCHEMES NAD THEMES PLUGINS
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "Mofiqul/dracula.nvim"
   use "tanvirtin/monokai.nvim"
   use "marko-cerovac/material.nvim"
+  use 'navarasu/onedark.nvim'
   
   -- CMP AUTOCOMPLETION PLUGINS
   use "hrsh7th/nvim-cmp" -- The completion plugin
