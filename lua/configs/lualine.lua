@@ -80,17 +80,17 @@ function M.config()
 	local config = {
 		options = {
 			icons_enabled = true,
-			theme = "solarized_dark",
+			theme = "auto",
 		 section_separators = {left = '', right = ''},
 		 component_separators = {left = '', right = ''},
 			disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 			always_divide_middle = true,
 		},
 		sections = {
-			lualine_a = { branch },
-			lualine_b = { diagnostics },
+			lualine_a = { mode },
+			lualine_b = { branch },
 			-- lualine_c = { mode, "filename" },
-			lualine_c = {mode},
+			lualine_c = {diagnostics},
 			-- lualine_x = { "encoding", "fileformat", "filetype" },
 			-- lualine_x = { diff, spaces, "encoding", filetype },
 			lualine_x = { spaces, "encoding", filetype },
