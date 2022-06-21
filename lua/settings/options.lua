@@ -46,10 +46,10 @@ local options = {
   vim.cmd [[set iskeyword+=-]]
   vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
-  -- using powershell as the default terminal
-  vim.cmd([[
-  set shell=powershell
-  set shellcmdflag=-command
-  set shellquote=\"
-  set shellxquote=
-  ]])
+---- using powershell as the default terminal
+--vim.cmd([[
+--set shell=powershell
+--set shellcmdflag=-command
+--set shellquote=\"
+--set shellxquote=
+--]])
