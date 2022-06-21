@@ -6,7 +6,7 @@ local sources = {
   "settings.plugins",
   "settings.impatient",
   
-  -- -- plugins
+  -- plugins
   "configs.alpha",
   "configs.autopairs",
   "configs.autosave",
