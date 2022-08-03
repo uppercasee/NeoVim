@@ -75,7 +75,7 @@ return require('packer').startup(function()
   -- OTHER PLUGINS
   use "goolord/alpha-nvim" -- front page of neovim
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "Pocco81/AutoSave.nvim" -- Automatically save current file(s).
+  use "Pocco81/auto-save.nvim" -- Automatically save current file(s).
 
   use "max397574/better-escape.nvim" -- using 'jk' to revert back to normal mode
   
