@@ -138,6 +138,8 @@ return require('packer').startup(function()
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   
+  -- vim-tmux-navigator
+  use "christoomey/vim-tmux-navigator"
   -- UNUSED PLUGINS --
 
   -- Colorchemes and themes
