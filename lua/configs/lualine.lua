@@ -95,7 +95,7 @@ function M.config()
 			-- lualine_x = { diff, spaces, "encoding", filetype },
 			lualine_x = { spaces, "encoding", filetype },
 			lualine_y = { location, "progress" },
-			lualine_z = { progress_visual },
+			-- lualine_z = { progress_visual },
 		},
 		inactive_sections = {
 			lualine_a = {},
