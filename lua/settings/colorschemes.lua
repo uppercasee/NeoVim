@@ -57,3 +57,9 @@ endtry
 -- }
 
 
+-- if not status_ok then
+--     local status_ok, catppuccin = pcall(require, "catppuccin")
+-- 	return
+-- end
+--
+-- catppuccin.setup()

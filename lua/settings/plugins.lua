@@ -62,8 +62,9 @@ return require('packer').startup(function()
   -- use "marko-cerovac/material.nvim"
   -- use 'navarasu/onedark.nvim'
   use "tanvirtin/monokai.nvim"
-  
-  -- CMP AUTOCOMPLETION PLUGINS
+  -- use { "catppuccin/nvim", as = "catppuccin" } 
+ 
+    -- CMP AUTOCOMPLETION PLUGINS
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
