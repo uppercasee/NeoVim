@@ -56,6 +56,11 @@ return require('packer').startup(function()
   use "nathom/filetype.nvim" -- speed up startup time
 
   -- COLORSCHEMES NAD THEMES PLUGINS
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- use "lunarvim/darkplus.nvim"
+  -- use "Mofiqul/dracula.nvim"
+  -- use "marko-cerovac/material.nvim"
+  -- use 'navarasu/onedark.nvim'
   use "tanvirtin/monokai.nvim"
   
   -- CMP AUTOCOMPLETION PLUGINS
@@ -141,13 +146,6 @@ return require('packer').startup(function()
   -- vim-tmux-navigator
   use "christoomey/vim-tmux-navigator"
   -- UNUSED PLUGINS --
-
-  -- Colorchemes and themes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use "lunarvim/darkplus.nvim"
-  -- use "Mofiqul/dracula.nvim"
-  -- use "marko-cerovac/material.nvim"
-  -- use 'navarasu/onedark.nvim'
 
   -- use "ahmedkhalf/project.nvim"
   -- use {"nvim-telescope/telescope-fzf-native.nvim", run = "make", cmd = "Telescope" }
