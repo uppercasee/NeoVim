@@ -63,6 +63,9 @@ return require('packer').startup(function()
   -- use 'navarasu/onedark.nvim'
   use "tanvirtin/monokai.nvim"
   -- use { "catppuccin/nvim", as = "catppuccin" } 
+
+  -- TRANSPARENT NVIM 
+  use "xiyaowong/nvim-transparent"
  
     -- CMP AUTOCOMPLETION PLUGINS
   use "hrsh7th/nvim-cmp" -- The completion plugin

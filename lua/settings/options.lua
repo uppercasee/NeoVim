@@ -46,6 +46,7 @@ local options = {
   vim.cmd [[set iskeyword+=-]]
   vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
+  vim.g.transparent_enabled = true 
 ---- using powershell as the default terminal
 --vim.cmd([[
 --set shell=powershell
