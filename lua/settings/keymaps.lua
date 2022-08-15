@@ -84,6 +84,9 @@ keymap("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_o
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", opts)
 
+-- Toggle Term 
+keymap("n", "<leader>\\", ":ToggleTerm<CR>", opts)
+
 -- Telescope
 keymap("n", "<leader>gt", "<cmd>Telescope git_status<CR>", opts)
 keymap("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", opts)
