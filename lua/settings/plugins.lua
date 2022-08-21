@@ -87,6 +87,9 @@ return require('packer').startup(function()
   use "akinsho/bufferline.nvim" -- buffer
   use "moll/vim-bbye" -- delete buffers
 
+  -- Github Copilot
+  use "github/copilot.vim"
+
   -- COLORIZER && COMMENT
   use "norcalli/nvim-colorizer.lua"
   use "numToStr/Comment.nvim" -- Easily comment stuff
