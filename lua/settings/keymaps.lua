@@ -76,10 +76,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- BufferDelete
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
--- Comments
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
-
 -- NvimTreeToggle
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", opts)
