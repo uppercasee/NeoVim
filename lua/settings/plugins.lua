@@ -51,7 +51,6 @@ return packer.startup(function(use)
 	-- Lua Development
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
-	use("christianchiarulli/lua-dev.nvim")
 	use("folke/lua-dev.nvim")
 
 	-- LSP
