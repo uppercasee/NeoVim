@@ -161,8 +161,8 @@ return packer.startup(function(use)
 	--	-- Statusline
 	--	use("christianchiarulli/lualine.nvim")
 	--
-	--	-- Startup
-	--	use("goolord/alpha-nvim")
+	-- Startup
+	use("goolord/alpha-nvim")
 	--
 	--	-- Indent
 	--	use("lukas-reineke/indent-blankline.nvim")
