@@ -3,13 +3,13 @@ if not status_ok then
 	return
 end
 
-monokai.setup{}
+monokai.setup({})
 
-vim.cmd [[
+vim.cmd([[
 try
   colorscheme monokai
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
 endtry
-]]
+]])
