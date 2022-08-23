@@ -47,6 +47,8 @@ local options = {
   vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
   vim.g.transparent_enabled = true 
+
+-- Not Needed
 ---- using powershell as the default terminal
 --vim.cmd([[
 --set shell=powershell
