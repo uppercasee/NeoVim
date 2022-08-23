@@ -13,5 +13,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: 0.14.2
           # CLI arguments
-          args: --color always --check init.lua lua/
+          args: --color always --check init.lua lua
 
