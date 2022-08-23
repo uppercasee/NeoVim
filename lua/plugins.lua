@@ -130,6 +130,7 @@ return packer.startup(function(use)
 	--	-- Colorschemes
 	--	use("lunarvim/onedarker.nvim")
 	--	use("lunarvim/darkplus.nvim")
+      use "tanvirtin/monokai.nvim"
 	--	-- use "folke/tokyonight.nvim"
 	--	-- use "lunarvim/colorschemes"
 	--
