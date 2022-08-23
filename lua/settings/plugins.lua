@@ -52,8 +52,8 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 	use("christianchiarulli/lua-dev.nvim")
-	use "folke/lua-dev.nvim"
-	
+	use("folke/lua-dev.nvim")
+
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
 	-- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
@@ -79,7 +79,7 @@ return packer.startup(function(use)
 	use("lvimuser/lsp-inlayhints.nvim")
 	-- use "simrat39/inlay-hints.nvim"
 	use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
-	
+
 	-- Completion
 	use("christianchiarulli/nvim-cmp")
 	use("hrsh7th/cmp-buffer") -- buffer completions
@@ -91,11 +91,11 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("zbirenbaum/copilot-cmp")
 	use({ "tzachar/cmp-tabnine", commit = "1a8fd2795e4317fd564da269cc64a2fa17ee854e", run = "./install.sh" })
-	
+
 	-- Snippet
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-	
+
 	-- Syntax/Treesitter
 	use("nvim-treesitter/nvim-treesitter")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
@@ -110,28 +110,28 @@ return packer.startup(function(use)
 		"abecodes/tabout.nvim",
 		wants = { "nvim-treesitter" }, -- or require if not used so far
 	})
-	
+
 	-- Marks
 	use("christianchiarulli/harpoon")
 	use("MattesGroeger/vim-bookmarks")
-	
+
 	-- Fuzzy Finder/Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 	use("tom-anders/telescope-vim-bookmarks.nvim")
-	
+
 	-- Note Taking
 	use("mickael-menu/zk-nvim")
-	
+
 	-- Color
 	use("NvChad/nvim-colorizer.lua")
 	use("ziontee113/color-picker.nvim")
-	
+
 	-- Colorschemes
 	use("lunarvim/onedarker.nvim")
 	use("lunarvim/darkplus.nvim")
 	use("tanvirtin/monokai.nvim")
-	 -- use "folke/tokyonight.nvim"
+	-- use "folke/tokyonight.nvim"
 	-- use "lunarvim/colorschemes"
 
 	-- Utility
@@ -145,101 +145,101 @@ return packer.startup(function(use)
 	-- Registers
 	use("tversteeg/registers.nvim")
 
-  -- Icon
-  use("kyazdani42/nvim-web-devicons")
-	
+	-- Icon
+	use("kyazdani42/nvim-web-devicons")
+
 	-- Debugging
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
 	-- use "theHamsta/nvim-dap-virtual-text"
 	-- use "Pocco81/DAPInstall.nvim"
-	
+
 	-- Tabline
 	-- use "akinsho/bufferline.nvim"
 	-- use "tiagovla/scope.nvim"
-	
+
 	-- Statusline
 	use("christianchiarulli/lualine.nvim")
-	
+
 	-- Startup
 	use("goolord/alpha-nvim")
-	
+
 	-- Indent
 	use("lukas-reineke/indent-blankline.nvim")
-	
+
 	-- File Explorer
 	use("kyazdani42/nvim-tree.lua")
 	use("christianchiarulli/lir.nvim")
-	
+
 	-- Comment
 	use("numToStr/Comment.nvim")
 	-- use "folke/todo-comments.nvim"
 	use("B4mbus/todo-comments.nvim")
-	
+
 	-- Terminal
 	use("akinsho/toggleterm.nvim")
 
 	-- Project
-	use "ahmedkhalf/project.nvim"
-	use "windwp/nvim-spectre"
-	
+	use("ahmedkhalf/project.nvim")
+	use("windwp/nvim-spectre")
+
 	-- Session
-	use "rmagatti/auto-session"
-	use "rmagatti/session-lens"
-	
+	use("rmagatti/auto-session")
+	use("rmagatti/session-lens")
+
 	-- Quickfix
-	use "kevinhwang91/nvim-bqf"
-	
+	use("kevinhwang91/nvim-bqf")
+
 	-- Code Runner
-	use "is0n/jaq-nvim"
-	use {
-	  "0x100101/lab.nvim",
-	  run = "cd js && npm ci",
-	}
-	
+	use("is0n/jaq-nvim")
+	use({
+		"0x100101/lab.nvim",
+		run = "cd js && npm ci",
+	})
+
 	-- Git
-	use "lewis6991/gitsigns.nvim"
-	use "f-person/git-blame.nvim"
-	use "ruifm/gitlinker.nvim"
-	use "mattn/vim-gist"
-	use "mattn/webapi-vim"
-	
+	use("lewis6991/gitsigns.nvim")
+	use("f-person/git-blame.nvim")
+	use("ruifm/gitlinker.nvim")
+	use("mattn/vim-gist")
+	use("mattn/webapi-vim")
+
 	-- Github
-	use "pwntester/octo.nvim"
-	
+	use("pwntester/octo.nvim")
+
 	-- Editing Support
-	use "windwp/nvim-autopairs"
-	use "monaqa/dial.nvim"
-	use "nacro90/numb.nvim"
-	use "andymass/vim-matchup"
-	use "folke/zen-mode.nvim"
+	use("windwp/nvim-autopairs")
+	use("monaqa/dial.nvim")
+	use("nacro90/numb.nvim")
+	use("andymass/vim-matchup")
+	use("folke/zen-mode.nvim")
 	-- use "Pocco81/true-zen.nvim"
-	use "karb94/neoscroll.nvim"
-	use "junegunn/vim-slash"
-	
+	use("karb94/neoscroll.nvim")
+	use("junegunn/vim-slash")
+
 	-- Motion
-	use "phaazon/hop.nvim"
+	use("phaazon/hop.nvim")
 	-- use "jinh0/eyeliner.nvim"
-	
+
 	-- Keybinding
-	use "folke/which-key.nvim"
-	
+	use("folke/which-key.nvim")
+
 	-- Java
-	use "mfussenegger/nvim-jdtls"
-	
+	use("mfussenegger/nvim-jdtls")
+
 	-- Rust
-	use { "christianchiarulli/rust-tools.nvim", branch = "modularize_and_inlay_rewrite" }
-	use "Saecki/crates.nvim"
-	
+	use({ "christianchiarulli/rust-tools.nvim", branch = "modularize_and_inlay_rewrite" })
+	use("Saecki/crates.nvim")
+
 	-- Typescript TODO: set this up, also add keybinds to ftplugin
-	use "jose-elias-alvarez/typescript.nvim"
-	
+	use("jose-elias-alvarez/typescript.nvim")
+
 	-- Markdown
-	use {
-	  "iamcco/markdown-preview.nvim",
-	  run = "cd app && npm install",
-	  ft = "markdown",
-	}
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		ft = "markdown",
+	})
 
 	-- Graveyard
 	-- use "romgrk/nvim-treesitter-context"
