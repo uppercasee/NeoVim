@@ -7,7 +7,6 @@
   - [lua-dev](https://github.com/folke/lua-dev.nvim)
 - LSP
 	- [nvim-lspconfig]("neovim/nvim-lspconfig")
-  <!-- - [nvim-lsp-installer]("williamboman/nvim-lsp-installer") -->
   - [mason]("williamboman/mason.nvim")
 	- [mason-lspconfig]("williamboman/mason-lspconfig.nvim")
 	- [null-ls]("jose-elias-alvarez/null-ls.nvim")
@@ -17,9 +16,10 @@
 	- [SchemaStore]("b0o/SchemaStore.nvim")
 	- [vim-illuminate]("RRethy/vim-illuminate")
 	- [fidget]("j-hui/fidget.nvim")
-	<!-- - [inlayhints]("lvimuser/lsp-inlayhints.nvim") -->
 	- [inlay-hints]("simrat39/inlay-hints.nvim")
 	- [lsp_lines]("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
+  <!-- - [inlayhints]("lvimuser/lsp-inlayhints.nvim") -->
+  <!-- - [nvim-lsp-installer]("williamboman/nvim-lsp-installer") -->
 - alpha
 - nvim-autopairs
 - auto-save
