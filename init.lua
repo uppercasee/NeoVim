@@ -10,7 +10,7 @@ local sources = {
 	"configs.alpha",
 	-- "configs.autocommands",
 	"configs.autopairs",
-	-- "configs.autosave",
+	"configs.autosave",
 	-- "configs.better_escape",
 	"configs.bufferline",
 	"configs.cmp",

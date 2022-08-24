@@ -95,6 +95,9 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
+	-- Autosave
+	use("Pocco81/auto-save.nvim") -- Automatically save current file(s).
+
 	-- Syntax/Treesitter
 	use("nvim-treesitter/nvim-treesitter")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
