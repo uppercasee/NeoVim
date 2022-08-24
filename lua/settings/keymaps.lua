@@ -39,9 +39,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- Toggle transparent background
--- keymap("n", "tr", ":TransparentToggle<CR>", opts)
-
 -- INSERT --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -55,7 +52,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
-
 
 -- VISUAL BLOCK --
 -- Move text up and down
@@ -71,8 +67,7 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-
--- FROM PLUGINS -- 
+-- FROM PLUGINS --
 -- BufferDelete
 keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 
@@ -80,8 +75,11 @@ keymap("n", "<Leader>w", ":Bdelete<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", opts)
 
--- Toggle Term 
+-- Toggle Term
 keymap("n", "<leader>\\", ":ToggleTerm<CR>", opts)
+
+-- Toggle transparent background
+keymap("n", "tr", ":TransparentToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>gt", "<cmd>Telescope git_status<CR>", opts)
@@ -91,7 +89,12 @@ keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 
 -- Trouble
 keymap("n", "<leader>`", "<cmd>TroubleToggle<cr>", opts)
