@@ -279,7 +279,7 @@ local current_signature = {
 		local sig = require("lsp_signature").status_line(30)
 		local hint = sig.hint
 
-		if not require("user.functions").isempty(hint) then
+		if not require("functions").isempty(hint) then
 			-- return "%#SLSeparator#│ : " .. hint .. "%*"
 			-- return "%#SLSeparator#│ " .. hint .. "%*"
 			return "%#SLSeparator# " .. hint .. "%*"
