@@ -1,11 +1,11 @@
 local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
-  return
+	return
 end
 
 local status_ok, handlers = pcall(require, "lsp.handlers")
 if not status_ok then
-  return
+	return
 end
 
 require("lsp.installer")
@@ -17,12 +17,12 @@ handlers.setup()
 -- map buffer local keybindings when the language server attaches
 local servers = { "pyright", "clangd" }
 for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
-    on_attach = handlers.on_attach,
-    capabilities = handlers.capabilities,
-    flags = {
-      -- This will be the default in neovim 0.7+
-      debounce_text_changes = 150,
-    }
-  }
+	require("lspconfig")[lsp].setup({
+		on_attach = handlers.on_attach,
+		capabilities = handlers.capabilities,
+		flags = {
+			-- This will be the default in neovim 0.7+
+			debounce_text_changes = 150,
+		},
+	})
 end

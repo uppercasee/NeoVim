@@ -125,18 +125,17 @@ keymap("n", "<leader>s", "<cmd>SymbolsOutline<CR>", opts)
 -- FORMATTING
 keymap("n", "<Leader>r", ":lua vim.lsp.buf.formatting_sync()", opts)
 
-
 M.show_documentation = function()
-  local filetype = vim.bo.filetype
-  if vim.tbl_contains({ "vim", "help" }, filetype) then
-    vim.cmd("h " .. vim.fn.expand "<cword>")
-  elseif vim.tbl_contains({ "man" }, filetype) then
-    vim.cmd("Man " .. vim.fn.expand "<cword>")
-  elseif vim.fn.expand "%:t" == "Cargo.toml" then
-    require("crates").show_popup()
-  else
-    vim.lsp.buf.hover()
-  end
+	local filetype = vim.bo.filetype
+	if vim.tbl_contains({ "vim", "help" }, filetype) then
+		vim.cmd("h " .. vim.fn.expand("<cword>"))
+	elseif vim.tbl_contains({ "man" }, filetype) then
+		vim.cmd("Man " .. vim.fn.expand("<cword>"))
+	elseif vim.fn.expand("%:t") == "Cargo.toml" then
+		require("crates").show_popup()
+	else
+		vim.lsp.buf.hover()
+	end
 end
 vim.api.nvim_set_keymap("n", "K", ":lua require('settings.keymaps').show_documentation()<CR>", opts)
 
