@@ -8,16 +8,16 @@
 - LSP
 	- [nvim-lspconfig]("neovim/nvim-lspconfig")
   - [mason]("williamboman/mason.nvim")
-	- [mason-lspconfig]("williamboman/mason-lspconfig.nvim")
-	- [null-ls]("jose-elias-alvarez/null-ls.nvim")
-	- [lsp_signature]("ray-x/lsp_signature.nvim")
-	- [nvim-navic]("SmiteshP/nvim-navic")
-	- [symbols-outline]("simrat39/symbols-outline.nvim")
-	- [SchemaStore]("b0o/SchemaStore.nvim")
-	- [vim-illuminate]("RRethy/vim-illuminate")
-	- [fidget]("j-hui/fidget.nvim")
-	- [inlay-hints]("simrat39/inlay-hints.nvim")
-	- [lsp_lines]("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
+  - [mason-lspconfig]("williamboman/mason-lspconfig.nvim")
+  - [null-ls]("jose-elias-alvarez/null-ls.nvim")
+  - [lsp_signature]("ray-x/lsp_signature.nvim")
+  - [nvim-navic]("SmiteshP/nvim-navic")
+  - [symbols-outline]("simrat39/symbols-outline.nvim")
+  - [SchemaStore]("b0o/SchemaStore.nvim")
+  - [vim-illuminate]("RRethy/vim-illuminate")
+  - [fidget]("j-hui/fidget.nvim")
+  - [inlay-hints]("simrat39/inlay-hints.nvim")
+  - [lsp_lines]("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
   <!-- - [inlayhints]("lvimuser/lsp-inlayhints.nvim") -->
   <!-- - [nvim-lsp-installer]("williamboman/nvim-lsp-installer") -->
 - alpha
