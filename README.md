@@ -1,1 +1,5 @@
 # NeoVim
+
+## Dependencies
+
+- ripgrep
