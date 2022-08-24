@@ -1,4 +1,4 @@
-	-- settings
+-- settings
 require("settings.colorschemes")
 require("settings.keymaps")
 require("settings.options")
@@ -10,7 +10,7 @@ require("configs.autocommands")
 require("configs.autopairs")
 require("configs.autosave")
 require("configs.better_escape")
-require("configs.bufferline")
+-- require("configs.bufferline")
 require("configs.cmp")
 require("configs.colorizer")
 require("configs.comments")
