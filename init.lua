@@ -8,7 +8,7 @@ local sources = {
 
 	-- plugins
 	"configs.alpha",
-	-- "configs.autocommands",
+	"configs.autocommands",
 	"configs.autopairs",
 	"configs.autosave",
 	-- "configs.better_escape",
@@ -30,8 +30,8 @@ local sources = {
 	"configs.toggleterm",
 	"configs.treesitter",
 	-- "configs.trouble",
-	-- "configs.webdevicons",
-	-- "configs.which-key",
+	"configs.webdev-icons",
+	"configs.whichkey",
 	-- "lsp",
 }
 
