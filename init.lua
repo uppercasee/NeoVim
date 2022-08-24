@@ -8,6 +8,7 @@ local sources = {
 
 	-- plugins
 	-- "configs.alpha",
+	-- "configs.autocommands",
 	"configs.autopairs",
 	-- "configs.autosave",
 	-- "configs.better_escape",
@@ -19,7 +20,7 @@ local sources = {
 	"configs.gitsigns",
 	-- "configs.icons",
 	"configs.indentline",
-	-- "configs.lualine",
+	"configs.lualine",
 	-- "configs.neoscroll",
 	"configs.nvim-tree",
 	-- "configs.presence",
