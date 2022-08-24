@@ -171,7 +171,7 @@ return packer.startup(function(use)
 
 	-- File Explorer
 	use("kyazdani42/nvim-tree.lua")
-	use("christianchiarulli/lir.nvim")
+	-- use("christianchiarulli/lir.nvim")
 
 	-- Comment
 	use("numToStr/Comment.nvim")
