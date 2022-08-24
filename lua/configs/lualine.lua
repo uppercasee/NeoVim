@@ -5,7 +5,6 @@ if not status_ok then
 end
 
 local lualine_scheme = "darkplus_dark"
--- local lualine_scheme = "onedarker_alt"
 
 local status_theme_ok, theme = pcall(require, "lualine.themes." .. lualine_scheme)
 if not status_theme_ok then
@@ -34,21 +33,6 @@ local indent = "#CE9178"
 local yellow = "#DCDCAA"
 local yellow_orange = "#D7BA7D"
 local purple = "#C586C0"
-
-if lualine_scheme == "darkplus_dark" then
-	-- gray = "#3e3e3e"
-	gray = "#303030"
-	dark_gray = "#303030"
-	red = "#bf616a"
-	blue = "#5e81ac"
-	indent = "#A3BE8C"
-	green = "#A3BE8C"
-	cyan = "#88c0d0"
-	orange = "#C68A75"
-	yellow = "#DCDCAA"
-	yellow_orange = "#D7BA7D"
-	purple = "#B48EAD"
-end
 
 local sl_hl = vim.api.nvim_get_hl_by_name("StatusLine", true)
 -- local sl_hl_sep = vim.api.nvim_get_hl_by_name("StatusLineSeparator", true)
@@ -97,55 +81,23 @@ local mode_color = {
 	t = red,
 }
 
-local left_pad = {
+local onlymode = {
 	function()
-		return " "
+		return " "
+	end,
+	color = function()
+		return { fg = mode_color[vim.fn.mode()], bg = gray }
 	end,
 	padding = 0,
-	color = function()
-		return { fg = gray }
-	end,
-}
-
-local right_pad = {
-	function()
-		return " "
-	end,
-	padding = 0,
-	color = function()
-		return { fg = dark_gray }
-	end,
-}
-
-local left_pad_alt = {
-	function()
-		return " "
-	end,
-	padding = 0,
-	color = function()
-		return { fg = gray }
-	end,
-}
-
-local right_pad_alt = {
-	function()
-		return " "
-	end,
-	padding = 0,
-	color = function()
-		return { fg = gray }
-	end,
 }
 
 local mode = {
-	-- mode component
-	function()
-		-- return "▊"
+	"mode",
+	fmt = function(str)
+		-- return " " .. str
 		return " "
-		-- return "  "
 	end,
 	color = function()
-		-- auto change color according to neovims mode
 		return { fg = mode_color[vim.fn.mode()], bg = gray }
 	end,
 	padding = 0,
@@ -176,7 +128,7 @@ local diagnostics = {
 	colored = false,
 	update_in_insert = false,
 	always_visible = true,
-	padding = 0,
+	padding = 1,
 }
 
 local diff = {
@@ -290,17 +242,6 @@ local current_signature = {
 	cond = hide_in_width_100,
 	padding = 0,
 }
-
--- cool function for progress
--- local progress = function()
---   local current_line = vim.fn.line "."
---   local total_lines = vim.fn.line "$"
---   local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
---   local line_ratio = current_line / total_lines
---   local index = math.ceil(line_ratio * #chars)
---   -- return chars[index]
---   return "%#SLProgress#" .. chars[index] .. "%*"
--- end
 
 local spaces = {
 	function()
@@ -441,21 +382,17 @@ lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		-- theme = "auto",
-		theme = theme,
+		theme = "auto",
+		-- theme = theme,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard" },
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { left_pad, mode, branch, right_pad },
-		lualine_b = { left_pad_alt, diagnostics, right_pad_alt },
-		-- lualine_c = {},
+		lualine_a = { mode, branch },
+		lualine_b = { diagnostics },
 		lualine_c = { current_signature },
-		-- lualine_x = { diff, spaces, "encoding", filetype },
-		-- lualine_x = { diff, lanuage_server, spaces, filetype },
-		-- lualine_x = { lanuage_server, spaces, filetype },
 		lualine_x = { lanuage_server, spaces, filetype },
 		lualine_y = {},
 		lualine_z = { location, progress },
@@ -468,6 +405,15 @@ lualine.setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	tabline = {},
+	tabline = {
+		lualine_a = {
+			{
+				"buffers",
+				separator = { left = "", right = "" },
+				right_padding = 2,
+				symbols = { alternate_file = "" },
+			},
+		},
+	},
 	extensions = {},
 })
