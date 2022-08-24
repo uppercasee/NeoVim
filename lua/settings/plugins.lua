@@ -154,8 +154,8 @@ return packer.startup(function(use)
 	-- use "Pocco81/DAPInstall.nvim"
 
 	-- Tabline
-	-- use "akinsho/bufferline.nvim"
-	-- use "tiagovla/scope.nvim"
+	use("akinsho/bufferline.nvim")
+	use("tiagovla/scope.nvim")
 
 	-- Statusline
 	use("christianchiarulli/lualine.nvim")

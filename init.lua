@@ -12,7 +12,7 @@ local sources = {
 	"configs.autopairs",
 	-- "configs.autosave",
 	-- "configs.better_escape",
-	-- "configs.bufferline",
+	"configs.bufferline",
 	"configs.cmp",
 	-- "configs.colorizer",
 	"configs.comments",
