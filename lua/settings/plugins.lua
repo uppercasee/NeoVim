@@ -101,21 +101,20 @@ return packer.startup(function(use)
 	use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
 	use("nvim-treesitter/nvim-treesitter-textobjects")
-	use("kylechui/nvim-surround")
 	use({
 		"abecodes/tabout.nvim",
 		wants = { "nvim-treesitter" }, -- or require if not used so far
 	})
 	-- use "wellle/targets.vim"
 	-- use "RRethy/nvim-treesitter-textsubjects"
-
+	-- surround
+	use("kylechui/nvim-surround")
 	-- Marks
 	use("christianchiarulli/harpoon")
 
 	-- Fuzzy Finder/Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-	use("tom-anders/telescope-vim-bookmarks.nvim")
 
 	-- Color
 	use("NvChad/nvim-colorizer.lua")
@@ -209,7 +208,12 @@ return packer.startup(function(use)
 	use("christianchiarulli/lsp-inlay-hints")
 	use("stevearc/aerial.nvim")
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+
+
+
+
 	-- Disabled Plugins
+	-- use("tom-anders/telescope-vim-bookmarks.nvim")
 	-- use("MattesGroeger/vim-bookmarks")
 	-- Note Taking
 	-- use("mickael-menu/zk-nvim")
@@ -217,7 +221,6 @@ return packer.startup(function(use)
 	-- use("f-person/git-blame.nvim")
 	-- use("mattn/vim-gist")
 	-- use("mattn/webapi-vim")
-
 	-- Github
 	-- use("pwntester/octo.nvim")
 	-- use("monaqa/dial.nvim")
