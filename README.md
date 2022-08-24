@@ -46,6 +46,9 @@
 
 </details>
 
+<details>
+  <summary>Debugging</summary>
+
 - [alpha](https://github.com/goolord/alpha-nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [auto-save](https://github.com/)
@@ -74,6 +77,7 @@
 - [webdev-icons](https://github.com/)
 - [whichkey](https://github.com/)
 
+</details>
 
 <details>
   <summary>Dependencies</summary>
