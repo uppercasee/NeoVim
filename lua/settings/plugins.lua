@@ -243,6 +243,10 @@ return packer.startup(function(use)
 		ft = "markdown",
 	})
 
+	use("max397574/better-escape.nvim")
+	use("andweeb/presence.nvim")
+	use("nathom/filetype.nvim")
+	use("xiyaowong/nvim-transparent")
 	-- Graveyard
 	-- use "romgrk/nvim-treesitter-context"
 	-- use "mizlan/iswap.nvim"
@@ -269,7 +273,7 @@ return packer.startup(function(use)
 	-- use "nvim-lua/lsp_extensions.nvim"
 	-- use { "christianchiarulli/nvim-gps", branch = "text_hl" }
 	-- use "stevearc/stickybuf.nvim"
-	-- use "folke/trouble.nvim"
+	use("folke/trouble.nvim")
 	-- use "drybalka/tree-climber.nvim"
 	-- use "phaazon/hop.nvim"
 	-- use { "michaelb/sniprun", run = "bash ./install.sh" }
