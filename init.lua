@@ -25,7 +25,7 @@ local sources = {
 	-- "configs.presence",
 	"configs.project",
 	-- "configs.symbols_outline",
-	-- "configs.telescope",
+	"configs.telescope",
 	"configs.toggleterm",
 	"configs.treesitter",
 	-- "configs.trouble",
