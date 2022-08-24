@@ -14,7 +14,7 @@ local sources = {
 	--  "configs.bufferline",
 	--  "configs.cmp",
 	--  "configs.colorizer",
-	--  "configs.comments",
+	"configs.comments",
 	--  "configs.filetype",
 	--  "configs.gitsigns",
 	"configs.icons",
