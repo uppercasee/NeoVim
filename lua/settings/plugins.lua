@@ -154,7 +154,7 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
 	-- use "theHamsta/nvim-dap-virtual-text"
-	-- use "Pocco81/DAPInstall.nvim"
+	use "Pocco81/dap-buddy.nvim"
 
 	-- Tabline
 	use("akinsho/bufferline.nvim")
