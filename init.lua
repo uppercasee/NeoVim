@@ -16,9 +16,11 @@ local sources = {
 	"configs.cmp",
 	"configs.colorizer",
 	"configs.comments",
+	"configs.dap",
 	"configs.filetype",
 	"configs.gitsigns",
 	-- "configs.icons",
+	"configs.illuminate",
 	"configs.indentline",
 	"configs.lualine",
 	"configs.neoscroll",
@@ -38,6 +40,6 @@ local sources = {
 for _, source in ipairs(sources) do
 	local status_ok, notok = pcall(require, source)
 	if not status_ok then
-		error("Couldn't load " .. source .. "\n" .. notok)
+		vim.notify("Couldn't load " .. source .. "\n" .. notok)
 	end
 end
