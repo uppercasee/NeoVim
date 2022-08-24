@@ -47,7 +47,7 @@
 </details>
 
 <details>
-  <summary>Debugging</summary>
+  <summary>Others</summary>
 
 - [alpha](https://github.com/goolord/alpha-nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
