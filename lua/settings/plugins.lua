@@ -66,7 +66,7 @@ return packer.startup(function(use)
 	use("lvimuser/lsp-inlayhints.nvim")
 	use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
 	-- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-	-- use("j-hui/fidget.nvim")
+	use("j-hui/fidget.nvim")
 	-- use "simrat39/inlay-hints.nvim"
 
 	-- Completion
@@ -110,16 +110,12 @@ return packer.startup(function(use)
 	-- use "RRethy/nvim-treesitter-textsubjects"
 
 	-- Marks
-	-- use("christianchiarulli/harpoon")
-	-- use("MattesGroeger/vim-bookmarks")
+	use("christianchiarulli/harpoon")
 
 	-- Fuzzy Finder/Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 	use("tom-anders/telescope-vim-bookmarks.nvim")
-
-	-- Note Taking
-	-- use("mickael-menu/zk-nvim")
 
 	-- Color
 	use("NvChad/nvim-colorizer.lua")
@@ -132,9 +128,8 @@ return packer.startup(function(use)
 	-- Utility
 	use("rcarriga/nvim-notify")
 	use("moll/vim-bbye")
-	-- use("stevearc/dressing.nvim")
-	-- use("ghillb/cybu.nvim")
-	-- use("lalitmee/browse.nvim")
+	use("stevearc/dressing.nvim")
+	use("ghillb/cybu.nvim")
 
 	-- Icon
 	use("kyazdani42/nvim-web-devicons")
@@ -160,27 +155,19 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 
 	-- Quickfix
-	-- use("kevinhwang91/nvim-bqf")
+	use("kevinhwang91/nvim-bqf")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
-	-- use("f-person/git-blame.nvim")
-	-- use("ruifm/gitlinker.nvim")
-	-- use("mattn/vim-gist")
-	-- use("mattn/webapi-vim")
-
-	-- Github
-	-- use("pwntester/octo.nvim")
+	use("ruifm/gitlinker.nvim")
 
 	-- Editing Support
 	use("max397574/better-escape.nvim")
 	use("windwp/nvim-autopairs")
 	use("karb94/neoscroll.nvim")
-	-- use("monaqa/dial.nvim")
-	-- use("nacro90/numb.nvim")
-	-- use("andymass/vim-matchup")
-	-- use("folke/zen-mode.nvim")
-	-- use("junegunn/vim-slash")
+	use("nacro90/numb.nvim")
+	use("andymass/vim-matchup")
+	use("junegunn/vim-slash")
 
 	-- Keybinding
 	use("folke/which-key.nvim")
@@ -191,41 +178,62 @@ return packer.startup(function(use)
 	-- Trouble
 	use("folke/trouble.nvim")
 
-	-- Disabled Plugins
 	-- Registers
-	-- use("tversteeg/registers.nvim")
+	use("tversteeg/registers.nvim")
 	-- Tabline
 	-- use("akinsho/bufferline.nvim")
-	-- use("tiagovla/scope.nvim")
+	use("tiagovla/scope.nvim")
 	-- Motion
-	-- use("phaazon/hop.nvim")
+	use("phaazon/hop.nvim")
+	-- use "github/copilot.vim"
+	use({
+		"zbirenbaum/copilot.lua",
+		event = { "VimEnter" },
+		config = function()
+			vim.defer_fn(function()
+				require("copilot")
+			end, 100)
+		end,
+	})
+	-- Comments
+	use("folke/todo-comments.nvim")
+	-- Project
+	use("windwp/nvim-spectre")
+	-- Code Runner
+	use("is0n/jaq-nvim")
+	use("Pocco81/true-zen.nvim")
+	use("romgrk/nvim-treesitter-context")
+	use({ "christianchiarulli/JABS.nvim" })
+	use("filipdutescu/renamer.nvim")
+	use("unblevable/quick-scope")
+	use("christianchiarulli/lsp-inlay-hints")
+	use("stevearc/aerial.nvim")
+	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+	-- Disabled Plugins
+	-- use("MattesGroeger/vim-bookmarks")
+	-- Note Taking
+	-- use("mickael-menu/zk-nvim")
+	-- git
+	-- use("f-person/git-blame.nvim")
+	-- use("mattn/vim-gist")
+	-- use("mattn/webapi-vim")
+
+	-- Github
+	-- use("pwntester/octo.nvim")
+	-- use("monaqa/dial.nvim")
+	-- use("folke/zen-mode.nvim")
+	-- use("lalitmee/browse.nvim")
 	-- Project
 	-- use("ahmedkhalf/project.nvim")
-	--	-- use "github/copilot.vim"
-	--	use({
-	--		"zbirenbaum/copilot.lua",
-	--		event = { "VimEnter" },
-	--		config = function()
-	--			vim.defer_fn(function()
-	--				require("copilot")
-	--			end, 100)
-	--		end,
-	--	})
-	-- Comments:
+	-- Comments
 	-- use("B4mbus/todo-comments.nvim")
-	-- use "folke/todo-comments.nvim"
-	-- Project
-	-- use("windwp/nvim-spectre")
 	-- Session
 	-- use("rmagatti/auto-session")
 	-- use("rmagatti/session-lens")
-	-- Code Runner
-	-- use("is0n/jaq-nvim")
 	-- use({
 	-- 	"0x100101/lab.nvim",
 	-- 	run = "cd js && npm ci",
 	-- })
-	-- use "Pocco81/true-zen.nvim"
 	-- Motion
 	-- use "jinh0/eyeliner.nvim"
 	-- Java
@@ -246,34 +254,27 @@ return packer.startup(function(use)
 	-- use("lunarvim/darkplus.nvim")
 	-- use "folke/tokyonight.nvim"
 	-- use "lunarvim/colorschemes"
-	-- use "romgrk/nvim-treesitter-context"
+
 	-- use "mizlan/iswap.nvim"
 	-- use {'christianchiarulli/nvim-ts-rainbow'}
 	-- use "nvim-telescope/telescope-ui-select.nvim"
 	-- use "nvim-telescope/telescope-file-browser.nvim"
 	-- use 'David-Kunz/cmp-npm' -- doesn't seem to work
-	-- use { "christianchiarulli/JABS.nvim" }
 	-- use "lunarvim/vim-solidity"
 	-- use "tpope/vim-repeat"
 	-- use "Shatur/neovim-session-manager"
 	-- use "metakirby5/codi.vim"
 	-- use { "nyngwang/NeoZoom.lua", branch = "neo-zoom-original" }
 	-- use "rcarriga/cmp-dap"
-	-- use "filipdutescu/renamer.nvim"
 	-- use "https://github.com/rhysd/conflict-marker.vim"
 	-- use "rebelot/kanagawa.nvim"
-	-- use "unblevable/quick-scope"
-	-- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 	-- use "gbprod/cutlass.nvim"
-	-- use "christianchiarulli/lsp-inlay-hints"
+	-- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 	-- use "rmagatti/goto-preview"
-	-- use "stevearc/aerial.nvim"
 	-- use "nvim-lua/lsp_extensions.nvim"
 	-- use { "christianchiarulli/nvim-gps", branch = "text_hl" }
 	-- use "stevearc/stickybuf.nvim"
 	-- use "drybalka/tree-climber.nvim"
-	-- use "phaazon/hop.nvim"
-	-- use { "michaelb/sniprun", run = "bash ./install.sh" }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
