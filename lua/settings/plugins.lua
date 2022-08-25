@@ -184,7 +184,7 @@ return packer.startup(function(use)
 	-- use("akinsho/bufferline.nvim")
 	use("tiagovla/scope.nvim")
 	-- Motion
-	use "jinh0/eyeliner.nvim"
+	use("jinh0/eyeliner.nvim")
 	use("phaazon/hop.nvim")
 	-- use "github/copilot.vim"
 	use({
@@ -210,9 +210,6 @@ return packer.startup(function(use)
 	use("christianchiarulli/lsp-inlay-hints")
 	use("stevearc/aerial.nvim")
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
-
-
-
 
 	-- Disabled Plugins
 	-- use("tom-anders/telescope-vim-bookmarks.nvim")
