@@ -198,7 +198,7 @@ return packer.startup(function(use)
 	})
 	-- Comments
 	use("folke/todo-comments.nvim")
-	-- Project
+	-- Search and replace
 	use("windwp/nvim-spectre")
 	-- Code Runner
 	use("is0n/jaq-nvim")
@@ -226,16 +226,16 @@ return packer.startup(function(use)
 	-- use("folke/zen-mode.nvim")
 	-- use("lalitmee/browse.nvim")
 	-- Project
-	-- use("ahmedkhalf/project.nvim")
+	use("ahmedkhalf/project.nvim")
 	-- Comments
 	-- use("B4mbus/todo-comments.nvim")
 	-- Session
 	-- use("rmagatti/auto-session")
 	-- use("rmagatti/session-lens")
-	-- use({
-	-- 	"0x100101/lab.nvim",
-	-- 	run = "cd js && npm ci",
-	-- })
+	use({
+		"0x100101/lab.nvim",
+		run = "cd js && npm ci",
+	})
 	-- Java
 	-- use("mfussenegger/nvim-jdtls")
 	-- Rust
