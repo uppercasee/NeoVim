@@ -13,7 +13,7 @@ require("configs.better_escape")
 -- require("configs.bufferline")
 require("configs.cmp")
 require("configs.colorizer")
-require("configs.comments")
+require("configs.comments") -- TODO: issues with commints
 require("configs.copilot")
 require("configs.cybu")
 require("configs.dap")
