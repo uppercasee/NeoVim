@@ -28,11 +28,11 @@ require("configs.hop")
 require("configs.icons")
 require("configs.illuminate")
 require("configs.indentline")
-require("configs.inlay-hints")
+-- require("configs.inlay-hints") TODO: make this work properly
 require("configs.jabs")
 require("configs.jaq")
 require("configs.lab")
-require("configs.lsp-inlayhints")
+-- require("configs.lsp-inlayhints") TODO: make this work properly
 require("configs.lualine")
 require("configs.matchup")
 require("configs.navic")
