@@ -122,6 +122,7 @@ return packer.startup(function(use)
 	use("xiyaowong/nvim-transparent")
 
 	-- Colorschemes
+	use("lunarvim/darkplus.nvim")
 	use("tanvirtin/monokai.nvim")
 
 	-- Utility
@@ -183,6 +184,7 @@ return packer.startup(function(use)
 	-- use("akinsho/bufferline.nvim")
 	use("tiagovla/scope.nvim")
 	-- Motion
+	use "jinh0/eyeliner.nvim"
 	use("phaazon/hop.nvim")
 	-- use "github/copilot.vim"
 	use({
@@ -237,14 +239,12 @@ return packer.startup(function(use)
 	-- 	"0x100101/lab.nvim",
 	-- 	run = "cd js && npm ci",
 	-- })
-	-- Motion
-	-- use "jinh0/eyeliner.nvim"
 	-- Java
 	-- use("mfussenegger/nvim-jdtls")
 	-- Rust
 	-- use({ "christianchiarulli/rust-tools.nvim", branch = "modularize_and_inlay_rewrite" })
 	-- use("Saecki/crates.nvim")
-	-- Typescript TODO: set this up, also add keybinds to ftplugin
+	-- -- Typescript TODO: set this up, also add keybinds to ftplugin
 	-- use("jose-elias-alvarez/typescript.nvim")
 	-- Markdown
 	-- use({
@@ -254,7 +254,6 @@ return packer.startup(function(use)
 	-- })
 	-- Colorschemes
 	-- use("lunarvim/onedarker.nvim")
-	-- use("lunarvim/darkplus.nvim")
 	-- use "folke/tokyonight.nvim"
 	-- use "lunarvim/colorschemes"
 
