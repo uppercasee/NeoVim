@@ -32,7 +32,7 @@ require("configs.indentline")
 require("configs.jabs")
 require("configs.jaq")
 require("configs.lab")
--- require("configs.lsp-inlayhints") TODO: make this work properly
+require("configs.lsp-inlayhints") -- TODO: make this work properly
 require("configs.lualine")
 require("configs.matchup")
 require("configs.navic")
