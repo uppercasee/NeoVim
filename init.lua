@@ -13,7 +13,7 @@ require("configs.better_escape")
 -- require("configs.bufferline")
 require("configs.cmp")
 require("configs.colorizer")
-require("configs.comments")
+require("configs.comments") -- TODO: issues with commints
 require("configs.copilot")
 require("configs.cybu")
 require("configs.dap")
@@ -32,7 +32,7 @@ require("configs.indentline")
 require("configs.jabs")
 require("configs.jaq")
 require("configs.lab")
--- require("configs.lsp-inlayhints") TODO: make this work properly
+require("configs.lsp-inlayhints") -- TODO: make this work properly
 require("configs.lualine")
 require("configs.matchup")
 require("configs.navic")
