@@ -1,5 +1,6 @@
 local status_ok, presence = pcall(require, "presence")
 if not status_ok then
+	vim.notify("[WARNING] presence module not found. presence support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

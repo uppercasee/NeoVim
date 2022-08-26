@@ -1,5 +1,11 @@
+local status_ok, illuminate = pcall(require, "illuminate")
+if not status_ok then
+	vim.notify("[WARNING] illuminate module not found. illuminate support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	return
+end
+
 -- default configuration
-require("illuminate").configure({
+illuminate.configure{
 	-- providers: provider used to get references in the buffer, ordered by priority
 	providers = {
 		"lsp",
@@ -40,4 +46,4 @@ require("illuminate").configure({
 	providers_regex_syntax_allowlist = {},
 	-- under_cursor: whether or not to illuminate under the cursor
 	under_cursor = true,
-})
+}

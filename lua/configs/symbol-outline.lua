@@ -1,5 +1,6 @@
 local status_ok, symbols_outline = pcall(require, "symbols-outline")
 if not status_ok then
+	vim.notify("[WARNING] symbols-outline module not found. symbols-outline support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

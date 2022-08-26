@@ -1,5 +1,6 @@
 local status_ok, nvim_web_devicons = pcall(require, "nvim-web-devicons")
 if not status_ok then
+	vim.notify("[WARNING] web-devicons module not found. web-devicons support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

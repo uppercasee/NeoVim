@@ -1,5 +1,6 @@
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
+	vim.notify("[WARNING] indent_blankline module not found. indent_blankline support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

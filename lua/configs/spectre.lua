@@ -1,5 +1,6 @@
 local status_ok, spectre = pcall(require, "spectre")
 if not status_ok then
+	vim.notify("[WARNING] spectre module not found. spectre support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 spectre.setup({

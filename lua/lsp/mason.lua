@@ -1,10 +1,12 @@
 local status_ok, mason = pcall(require, "mason")
 if not status_ok then
+	vim.notify("[WARNING] mason module not found. mason support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
   return
 end
 
 local status_ok_1, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not status_ok_1 then
+	vim.notify("[WARNING] mason-lspconfig module not found. mason-lspconfig support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
   return
 end
 

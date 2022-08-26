@@ -1,5 +1,6 @@
 local status_ok, toggleterm = pcall(require, "toggleterm")
 if not status_ok then
+	vim.notify("[WARNING] toggleterm module not found. toggleterm support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

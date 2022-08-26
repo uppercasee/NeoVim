@@ -1,18 +1,18 @@
 local status_ok, comment = pcall(require, "Comment")
 if not status_ok then
-  vim.notify("[WARNING] Comment module not found. Comment support disabled.")
+  vim.notify("[WARNING] Comment module not found. Comment support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
 local status_ok_1, _ = pcall(require, "lsp-inlayhints")
 if not status_ok_1 then
-  vim.notify("[WARNING] lsp_inlayhints module not found. Comment support disabled.")
+  vim.notify("[WARNING] lsp_inlayhints module not found. Comment support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
 local status_ok_2, _ = pcall(require, "ts_context_commentstring")
 if not status_ok_2 then
-  vim.notify("[WARNING] ts_context_commentstring module not found. Comment support disabled.")
+  vim.notify("[WARNING] ts_context_commentstring module not found. Comment support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
