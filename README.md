@@ -78,8 +78,7 @@ Please read carefully the messages provided by health check.
 
 If you still have an issue, [open a new issue](https://github.com/uppercasee/NeoVim/issues).
 
-TODO:
-
+### TODO:
 - [ ] LSP
 - [ ] Completion(cmp)
 - [ ] Treesitter
