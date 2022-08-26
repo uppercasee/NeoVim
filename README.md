@@ -1,91 +1,79 @@
-# NeoVim
+<div align="center">
+<p>
+    <a>
+      <img alt="Linux" src="https://img.shields.io/badge/Linux-%23.svg?style=flat-square&logo=linux&color=FCC624&logoColor=black" />
+    </a>
+    <a href="https://github.com/neovim/neovim/releases/tag/stable">
+      <img src="https://img.shields.io/badge/Neovim-0.7.2-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
+    </a>
+    <!-- <a href="https://github.com/uppercasee/NeoVim/commits">
+      <img src="https://badgen.net/github/commits/uppercasee/NeoVim" alt="Commit number" />
+    </a> -->
+    <a href="https://github.com/uppercasee/NeoVim/issues">
+      <img src="https://badgen.net/github/issues/uppercasee/NeoVim" alt="Issues" />
+    </a>
+    <a href="https://github.com/uppercasee/NeoVim/pulls">
+      <img src="https://badgen.net/github/prs/uppercasee/NeoVim" alt="Prs" />
+    </a>
+    <a href="https://github.com/uppercasee/NeoVim/search?l=vim-script">
+      <img src="https://img.shields.io/github/languages/top/uppercasee/NeoVim" alt="Top languages"/>
+    </a>
+    <a href="https://github.com/uppercasee/NeoVim/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/uppercasee/NeoVim?style=flat-square&logo=GNU&label=License" alt="License"/>
+    </a>
+</p>
+</div>
 
-## Plugins
-<details>
-  <summary>Basic (uses packer)</summary>
+## My [NeoVim]("https://neovim.io/") config:
 
-  - [Packer](https://github.com/wbthomason/packer.nvim) 
-  - [popup](https://github.com/nvim-lua/popup.nvim)
-  - [plenary](https://github.com/nvim-lua/plenary.nvim)
-  - [lua-dev](https://github.com/folke/lua-dev.nvim)
+### Install and setup #
 
-</details>
+See [here]("https://github.com/neovim/neovim/wiki/Installing-Neovim") on how to install Neovim and setup on your device.
 
-<details>
-  <summary>Language Server Protocol</summary>
+## Features
 
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-- [mason](https://github.com/williamboman/mason.nvim)
-- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
-- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
-- [lsp_signature](https://github.com/ray-x/lsp_signature.nvim)
-- [nvim-navic](https://github.com/SmiteshP/nvim-navic)
-- [symbols-outline](https://github.com/simrat39/symbols-outline.nvim)
-- [SchemaStore](https://github.com/b0o/SchemaStore.nvim)
-- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
-- [fidget](https://github.com/j-hui/fidget.nvim)
-- [inlay-hints](https://github.com/simrat39/inlay-hints.nvim)
-- [lsp_lines](https://git.sr.ht/~whynothugo/lsp_lines.nvim)
-- [inlayhints](https://github.com/lvimuser/lsp-inlayhints.nvim)
-- [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
-
-</details>
-
-<details>
-  <summary>Code Completions</summary>
-
-- [cmp](https://github.com/christianchiarulli/nvim-cmp)
-
-</details>
-
-<details>
-  <summary>Debugging</summary>
-
-- [dap](https://github.com/mfussenegger/nvim-dap)
-- [dapui](https://github.com/rcarriga/nvim-dap-ui)
-
-</details>
-
-<details>
-  <summary>Others</summary>
-
-- [alpha](https://github.com/goolord/alpha-nvim)
-- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-- [auto-save](https://github.com/)
-- [better-escape](https://github.com/)
-- [bufferline ](https://github.com/)
-- [luasnip](https://github.com/)
-- [colorizer](https://github.com/)
-- [comments](https://github.com/)
-- [fidget](https://github.com/j-hui/fidget.nvim")
-- [filetype](https://github.com/)
-- [illuminate](https://github.com/)
-- [indentblankline](https://github.com/)
-- [lualine](https://github.com/)
-- [neoscroll](https://github.com/)
-- [notify](https://github.com/)
-- [nvim-tree](https://github.com/)
-- [presence](https://github.com/)
-- [project](https://github.com/)
-- [symbold-outline](https://github.com/)
-- [tabnine](https://github.com/)
-- [telescope](https://github.com/)
-- [toggleterm](https://github.com/)
-- [transparent](https://github.com/)
-- [treesitter](https://github.com/)
-- [trouble](https://github.com/)
-- [webdev-icons](https://github.com/)
-- [whichkey](https://github.com/)
-
-</details>
-
-<details>
-  <summary>Dependencies</summary>
++ Plugin management via [Packer.nvim](https://github.com/wbthomason/packer.nvim).
++ Code, snippet, word auto-completion via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
++ Language server protocol (LSP) support via [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
++ Git integration via [vim-fugitive](https://github.com/tpope/vim-fugitive).
++ Better escaping from insert mode via [better-escape.vim](https://github.com/jdhao/better-escape.vim).
++ Faster code commenting via [vim-commentary](https://github.com/tpope/vim-commentary).
++ Fast buffer jump via [hop.nvim](https://github.com/phaazon/hop.nvim).
++ Beautiful statusline via [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
++ File tree explorer via [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua).
++ Better quickfix list with [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf).
++ User-defined mapping hint via [which-key.nvim](https://github.com/folke/which-key.nvim).
++ Code highlighting via [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
++ Animated GUI style notification via [nvim-notify](https://github.com/rcarriga/nvim-notify).
++ Smooth scroll experience via [neoscroll](https://github.com/karb94/neoscroll.nvim).
++ ......
+<!-- + Ultra-fast project-wide fuzzy searching via [LeaderF](https://github.com/Yggdroot/LeaderF). -->
+<!-- + Faster matching pair insertion and jump via [delimitMate](https://github.com/Raimondi/delimitMate). -->
+<!-- + Smarter and faster matching pair management (add, replace or delete) via [vim-sandwich](https://github.com/machakann/vim-sandwich). -->
+<!-- + Powerful snippet insertion via [Ultisnips](https://github.com/SirVer/ultisnips). -->
+<!-- + Show search index and count with [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens). -->
+<!-- + Command line auto-completion via [wilder.nvim](https://github.com/gelguy/wilder.nvim). -->
+<!-- + Asynchronous code execution via [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim). -->
+<!-- + Code editing using true nvim inside browser via [firenvim](https://github.com/glacambre/firenvim). -->
+<!-- + Color theme via [vim-gruvbox8](https://github.com/lifepillar/vim-gruvbox8) and other beautiful themes. -->
+<!-- + Markdown writing and previewing via [vim-markdown](https://github.com/plasticboy/vim-markdown) and [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim). -->
+<!-- + LaTeX editing and previewing via [vimtex](https://github.com/lervag/vimtex) <sup id="a1">[1](#f1)</sup>. -->
+<!-- + Tags navigation via [vista](https://github.com/liuchengxu/vista.vim). -->
+<!-- + Code formatting via [Neoformat](https://github.com/sbdchd/neoformat). -->
+<!-- + Undo management via [vim-mundo](https://github.com/simnalamburt/vim-mundo) -->
 
 ## Dependencies
+
 - ripgrep
 - shellcheck
 - stylua
 - black
 
-</details>
+## Contributing
+
+If you find anything that needs improving, do not hesitate to point it out or create a PR.
+
+If you come across an issue, you can first use `:checkhealth` command provided by `nvim` to trouble-shoot yourself.
+Please read carefully the messages provided by health check.
+
+If you still have an issue, [open a new issue](https://github.com/uppercasee/NeoVim/issues).
