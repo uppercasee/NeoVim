@@ -1,5 +1,6 @@
 local status_ok, escape = pcall(require, "better_escape")
 if not status_ok then
+	vim.notify("[WARNING] Better escape module not found. Better-escape support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

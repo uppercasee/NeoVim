@@ -1,6 +1,7 @@
 M = {}
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
+	vim.notify("[WARNING] lualine module not found. lualine support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

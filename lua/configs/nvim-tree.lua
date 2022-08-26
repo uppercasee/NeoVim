@@ -1,10 +1,12 @@
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
+	vim.notify("[WARNING] nvim-tree module not found. nvim-tree support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
 local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
 if not config_status_ok then
+	vim.notify("[WARNING] nvim-tree.config module not found. nvim-tree support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

@@ -1,5 +1,6 @@
 local status_ok, neoscroll = pcall(require, "neoscroll")
 if not status_ok then
+	vim.notify("[WARNING] neoscroll module not found. neoscroll support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

@@ -1,5 +1,6 @@
 local status_ok, tabout = pcall(require, "tabout")
 if not status_ok then
+	vim.notify("[WARNING] tabout module not found. tabout support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

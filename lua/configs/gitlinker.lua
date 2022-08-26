@@ -1,5 +1,6 @@
 local status_ok, gitlinker = pcall(require, "gitlinker")
 if not status_ok then
+	vim.notify("[WARNING] gitlinker module not found. gitlinker support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

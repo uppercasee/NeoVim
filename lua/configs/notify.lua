@@ -1,5 +1,6 @@
 local status_ok, notify = pcall(require, "notify")
 if not status_ok then
+	vim.notify("[WARNING] Notify module not found. Notifications support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
@@ -16,10 +17,10 @@ notify.setup({
 	on_close = nil,
 
 	-- Render function for notifications. See notify-render()
-	render = "default",
+	render = "minimal",
 
 	-- Default timeout for notifications
-	timeout = 175,
+	timeout = 2000,
 
 	-- For stages that change opacity this is treated as the highlight behind the window
 	-- Set this to either a highlight group or an RGB hex value e.g. "#000000"

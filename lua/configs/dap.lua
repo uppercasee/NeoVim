@@ -1,10 +1,12 @@
 local dap_status_ok, dap = pcall(require, "dap")
 if not dap_status_ok then
+	vim.notify("[WARNING] DAP module not found. DAP support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
 local dap_ui_status_ok, dapui = pcall(require, "dapui")
 if not dap_ui_status_ok then
+	vim.notify("[WARNING] dapUI module not found. dapUI support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

@@ -1,6 +1,7 @@
 M = {}
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
+	vim.notify("[WARNING] lspconfig module not found. lspconfig support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
 	return
 end
 
@@ -36,11 +37,13 @@ require("lsp.null-ls")
 
 local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
 if not l_status_ok then
+	vim.notify("[WARNING] lsp_lines module not found. lsp_lines support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
 	return
 end
 
 local status_ok, hints = pcall(require, "lsp-inlayhints")
 if not status_ok then
+	vim.notify("[WARNING] lsp-inlayhints module not found. lsp-inlayhints support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
 	return
 end
 

@@ -1,5 +1,6 @@
 local status_ok, dressing = pcall(require, "dressing")
 if not status_ok then
+	vim.notify("[WARNING] Dressing module not found. Dressing support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

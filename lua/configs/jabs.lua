@@ -1,5 +1,6 @@
 local status_ok, jabs = pcall(require, "jabs")
 if not status_ok then
+	vim.notify("[WARNING] jabs module not found. jabs support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

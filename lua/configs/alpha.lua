@@ -1,5 +1,6 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
+	vim.notify("[WARNING] Alpha module not found. Alpha support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

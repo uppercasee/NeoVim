@@ -1,5 +1,6 @@
 local status_ok, sniprun = pcall(require, "sniprun")
 if not status_ok then
+	vim.notify("[WARNING] sniprun module not found. sniprun support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

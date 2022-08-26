@@ -4,6 +4,7 @@ M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_cmp_ok then
+	vim.notify("[WARNING] cmp_nvim_lsp module not found. cmp_nvim_lsp support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
 	return
 end
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true

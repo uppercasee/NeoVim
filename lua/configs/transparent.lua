@@ -1,5 +1,6 @@
 local transparent, cmp = pcall(require, "transparent")
 if not transparent then
+	vim.notify("[WARNING] transparent module not found. transparent support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

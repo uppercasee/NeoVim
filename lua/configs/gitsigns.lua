@@ -1,5 +1,6 @@
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
+	vim.notify("[WARNING] gitsigns module not found. gitsigns support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 

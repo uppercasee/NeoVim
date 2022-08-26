@@ -1,5 +1,6 @@
 local status_ok, autosave = pcall(require, "auto-save")
 if not status_ok then
+	vim.notify("[WARNING] Autosave module not found. Autosave support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
 	return
 end
 
