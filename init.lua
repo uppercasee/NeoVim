@@ -11,10 +11,10 @@ require("configs.autocommands")
 require("configs.autopairs")
 require("configs.autosave")
 require("configs.better_escape")
--- require("configs.bufferline")
+-- require("configs.bufferline") -- TODO: remove bufferline
 require("configs.cmp")
 require("configs.colorizer")
-require("configs.comments") -- TODO: issues with commints
+require("configs.comments")
 require("configs.copilot")
 require("configs.cybu")
 require("configs.dap")

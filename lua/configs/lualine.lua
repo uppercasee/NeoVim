@@ -5,10 +5,11 @@ if not status_ok then
 	return
 end
 
--- local lualine_scheme = "monokai"
+-- local lualine_scheme = "gruvbox"
 
 -- local status_theme_ok, theme = pcall(require, "lualine.themes." .. lualine_scheme)
 -- if not status_theme_ok then
+-- 	vim.notify("[WARNING] " .. lualine_scheme .. " is not found. lualine support disabled.", vim.log.levels.WARN, {title = 'Lualine-config'})
 -- 	return
 -- end
 
@@ -410,10 +411,20 @@ lualine.setup({
 		lualine_a = {
 			{
 				"buffers",
-				separator = { left = "", right = "" },
+				-- separator = { left = "", right = "" },
 				right_padding = 2,
-				symbols = { alternate_file = "" },
-			},
+        symbols = {
+          modified = ' ●',      -- Text to show when the buffer is modified
+          alternate_file = "" , -- Text to show to identify the alternate file
+          -- alternate_file = '#', -- Text to show to identify the alternate file
+          directory =  '',     -- Text to show when the buffer is a directory
+          },
+        buffers_color = {
+          -- Same values as the general color option can be used here.
+          -- active = 'lualine_normal',     -- Color for active buffer.
+          inactive = "", -- Color for inactive buffer.
+        },
+      },
 		},
 	},
 	extensions = {},
