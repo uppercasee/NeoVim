@@ -1,6 +1,10 @@
 local status_ok, surround = pcall(require, "nvim-surround")
 if not status_ok then
-	vim.notify("[WARNING] surround module not found. surround support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] surround module not found. surround support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

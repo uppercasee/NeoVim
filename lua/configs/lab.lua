@@ -1,6 +1,6 @@
 local status_ok, lab = pcall(require, "lab")
 if not status_ok then
-	vim.notify("[WARNING] lab module not found. lab support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify("[WARNING] lab module not found. lab support disabled.", vim.log.levels.WARN, { title = "Nvim-config" })
 	return
 end
 

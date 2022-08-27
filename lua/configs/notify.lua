@@ -1,6 +1,10 @@
 local status_ok, notify = pcall(require, "notify")
 if not status_ok then
-	vim.notify("[WARNING] Notify module not found. Notifications support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Notify module not found. Notifications support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

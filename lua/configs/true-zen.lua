@@ -1,6 +1,10 @@
 local status_ok, true_zen = pcall(require, "true-zen")
 if not status_ok then
-	vim.notify("[WARNING] true-zen module not found. true-zen support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] true-zen module not found. true-zen support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 true_zen.setup({

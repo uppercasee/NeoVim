@@ -1,6 +1,10 @@
 local status_ok, inlay_hints = pcall(require, "inlay-hints")
 if not status_ok then
-	vim.notify("[WARNING] inlay-hints module not found. inlay-hints support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] inlay-hints module not found. inlay-hints support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

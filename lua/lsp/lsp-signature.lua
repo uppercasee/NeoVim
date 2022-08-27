@@ -1,6 +1,10 @@
 local status_ok, signature = pcall(require, "lsp_signature")
 if not status_ok then
-	vim.notify("[WARNING] lsp_signature module not found. lsp_signature support disabled.", vim.log.levels.WARN, {title = 'Nvim-LSP'})
+	vim.notify(
+		"[WARNING] lsp_signature module not found. lsp_signature support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-LSP" }
+	)
 	return
 end
 

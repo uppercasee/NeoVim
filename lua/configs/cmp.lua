@@ -1,18 +1,30 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-	vim.notify("[WARNING] cmp module not found. Completion support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] cmp module not found. Completion support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-	vim.notify("[WARNING] Luasnip module not found. Luasnip support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Luasnip module not found. Luasnip support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 
 local tabnine_status_ok, _ = pcall(require, "configs.tabnine")
 if not tabnine_status_ok then
-	vim.notify("[WARNING] Tabnine module not found. Tabnine support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Tabnine module not found. Tabnine support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

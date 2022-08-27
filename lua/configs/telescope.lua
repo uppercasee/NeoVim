@@ -1,6 +1,10 @@
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-	vim.notify("[WARNING] telescope module not found. telescope support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] telescope module not found. telescope support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

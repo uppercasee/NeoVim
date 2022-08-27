@@ -1,7 +1,7 @@
 M = {}
 local status_ok, jaq_nvim = pcall(require, "jaq-nvim")
 if not status_ok then
-	vim.notify("[WARNING] jaq module not found. jaq support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify("[WARNING] jaq module not found. jaq support disabled.", vim.log.levels.WARN, { title = "Nvim-config" })
 	return
 end
 

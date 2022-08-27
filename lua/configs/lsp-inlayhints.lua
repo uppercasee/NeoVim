@@ -1,6 +1,10 @@
 local status_ok, hints = pcall(require, "lsp-inlayhints")
 if not status_ok then
-	vim.notify("[WARNING] lsp-inlayhints module not found. lsp-inlayhints support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] lsp-inlayhints module not found. lsp-inlayhints support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

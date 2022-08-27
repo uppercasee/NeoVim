@@ -1,6 +1,10 @@
 local status_ok, project = pcall(require, "project_nvim")
 if not status_ok then
-	vim.notify("[WARNING] project_nvim module not found. project support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] project_nvim module not found. project support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 project.setup({

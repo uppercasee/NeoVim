@@ -1,6 +1,10 @@
 local status_ok, todo_comments = pcall(require, "todo-comments")
 if not status_ok then
-	vim.notify("[WARNING] todo-comments module not found. todo-comments support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] todo-comments module not found. todo-comments support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

@@ -46,9 +46,9 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	-- PACKER AND ITS REQUIREMENTS
-	use "wbthomason/packer.nvim" -- Have packer manage itself
-	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+	use("wbthomason/packer.nvim") -- Have packer manage itself
+	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 	use("folke/lua-dev.nvim")
 
 	-- LSP
@@ -91,22 +91,22 @@ return packer.startup(function(use)
 			end, 100)
 		end,
 	}) -- replacement for github/copilot.vim
-	
+
 	-- Debugging
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
 	-- use "Pocco81/dap-buddy.nvim"
 	-- use "theHamsta/nvim-dap-virtual-text"
-	
+
 	-- Autosave
 	use("Pocco81/auto-save.nvim") -- Automatically save current file(s)
-	
+
 	-- BUFFER && tabline
-	use "akinsho/bufferline.nvim" -- buffer
-	use "moll/vim-bbye" -- delete buffers
+	use("akinsho/bufferline.nvim") -- buffer
+	use("moll/vim-bbye") -- delete buffers
 	use("tiagovla/scope.nvim")
 	use("ghillb/cybu.nvim")
-	
+
 	-- Colors
 	use("lunarvim/darkplus.nvim")
 	use("tanvirtin/monokai.nvim")
@@ -126,12 +126,12 @@ return packer.startup(function(use)
 
 	-- Code Runner
 	use("is0n/jaq-nvim")
-	
+
 	-- Discord Rich Presence
 	use("andweeb/presence.nvim")
-	
+
 	-- Editing Support
-	use("max397574/better-escape.nvim")-- using 'jk' to revert back to normal mode
+	use("max397574/better-escape.nvim") -- using 'jk' to revert back to normal mode
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("karb94/neoscroll.nvim") -- Smooth scrolling plugin
 	use("nacro90/numb.nvim")
@@ -144,7 +144,7 @@ return packer.startup(function(use)
 	-- Fuzzy Finder/Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-	
+
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 	use("ruifm/gitlinker.nvim")
@@ -157,20 +157,20 @@ return packer.startup(function(use)
 
 	-- Keybinding
 	use("folke/which-key.nvim")
-	
+
 	-- Quickfix
 	use("kevinhwang91/nvim-bqf")
 
 	-- Marks
 	use("christianchiarulli/harpoon")
-	
+
 	-- Motion
 	use("jinh0/eyeliner.nvim")
 	use("phaazon/hop.nvim")
 
 	-- Project
 	use("ahmedkhalf/project.nvim")
-	
+
 	-- Registers
 	use("tversteeg/registers.nvim")
 
@@ -183,13 +183,13 @@ return packer.startup(function(use)
 	-- Snippet
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-	use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 
 	-- Startup
 	use("goolord/alpha-nvim") -- front page of neovim
 	use("nathom/filetype.nvim")
 	use("lewis6991/impatient.nvim")
-	
+
 	-- STATUSLINE
 	-- use {
 	-- "nvim-lualine/lualine.nvim",
@@ -211,10 +211,10 @@ return packer.startup(function(use)
 	})
 	-- use "wellle/targets.vim"
 	-- use "RRethy/nvim-treesitter-textsubjects"
-	
+
 	-- Terminal
 	use("akinsho/toggleterm.nvim")
-	
+
 	-- Trouble
 	use("folke/trouble.nvim")
 
@@ -231,9 +231,9 @@ return packer.startup(function(use)
 		"0x100101/lab.nvim",
 		run = "cd js && npm ci",
 	})
-	
+
 	-- vim-tmux-navigator
-	use "christoomey/vim-tmux-navigator"
+	use("christoomey/vim-tmux-navigator")
 
 	-- Disabled Plugins
 	-- use("tom-anders/telescope-vim-bookmarks.nvim")

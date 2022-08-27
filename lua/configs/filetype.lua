@@ -1,6 +1,10 @@
 local status_ok, filetype = pcall(require, "filetype")
 if not status_ok then
-	vim.notify("[WARNING] Filetype module not found. Filetype support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Filetype module not found. Filetype support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

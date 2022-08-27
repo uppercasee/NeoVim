@@ -1,6 +1,10 @@
 local status_ok, trouble = pcall(require, "trouble")
 if not status_ok then
-	vim.notify("[WARNING] trouble module not found. trouble support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] trouble module not found. trouble support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

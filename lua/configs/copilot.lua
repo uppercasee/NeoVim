@@ -10,7 +10,11 @@
 
 local status_ok, copilot = pcall(require, "copilot")
 if not status_ok then
-	vim.notify("[WARNING] Copilot module not found. Copilot support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Copilot module not found. Copilot support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

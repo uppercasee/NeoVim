@@ -1,6 +1,10 @@
 local ok, cybu = pcall(require, "cybu")
 if not ok then
-	vim.notify("[WARNING] Cybu module not found. Cybu support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Cybu module not found. Cybu support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 cybu.setup({

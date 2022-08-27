@@ -1,6 +1,10 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
-	vim.notify("[WARNING] Bufferline module not found. Bufferline support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Bufferline module not found. Bufferline support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

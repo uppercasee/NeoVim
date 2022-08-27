@@ -1,6 +1,6 @@
 local status_ok, hop = pcall(require, "hop")
 if not status_ok then
-	vim.notify("[WARNING] hop module not found. hop support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify("[WARNING] hop module not found. hop support disabled.", vim.log.levels.WARN, { title = "Nvim-config" })
 	return
 end
 hop.setup()

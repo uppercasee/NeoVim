@@ -1,6 +1,10 @@
 local status_ok, context = pcall(require, "treesitter-context")
 if not status_ok then
-	vim.notify("[WARNING] treesitter-context module not found. treesitter-context support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] treesitter-context module not found. treesitter-context support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

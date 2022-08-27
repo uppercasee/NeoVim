@@ -1,7 +1,11 @@
 M = {}
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-	vim.notify("[WARNING] lualine module not found. lualine support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] lualine module not found. lualine support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 
@@ -413,18 +417,18 @@ lualine.setup({
 				"buffers",
 				-- separator = { left = "", right = "" },
 				right_padding = 2,
-        symbols = {
-          modified = ' ●',      -- Text to show when the buffer is modified
-          alternate_file = "" , -- Text to show to identify the alternate file
-          -- alternate_file = '#', -- Text to show to identify the alternate file
-          directory =  '',     -- Text to show when the buffer is a directory
-          },
-        buffers_color = {
-          -- Same values as the general color option can be used here.
-          -- active = 'lualine_normal',     -- Color for active buffer.
-          inactive = "", -- Color for inactive buffer.
-        },
-      },
+				symbols = {
+					modified = " ●", -- Text to show when the buffer is modified
+					alternate_file = "", -- Text to show to identify the alternate file
+					-- alternate_file = '#', -- Text to show to identify the alternate file
+					directory = "", -- Text to show when the buffer is a directory
+				},
+				buffers_color = {
+					-- Same values as the general color option can be used here.
+					-- active = 'lualine_normal',     -- Color for active buffer.
+					inactive = "", -- Color for inactive buffer.
+				},
+			},
 		},
 	},
 	extensions = {},

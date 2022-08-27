@@ -1,6 +1,10 @@
 local status_ok, numb = pcall(require, "numb")
 if not status_ok then
-	vim.notify("[WARNING] numb module not found. numb support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] numb module not found. numb support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 numb.setup({

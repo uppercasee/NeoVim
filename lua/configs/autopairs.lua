@@ -1,7 +1,11 @@
 -- Setup nvim-cmp.
 local status_ok, npairs = pcall(require, "nvim-autopairs")
 if not status_ok then
-	vim.notify("[WARNING] Autopairs module not found. Autopairs support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] Autopairs module not found. Autopairs support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

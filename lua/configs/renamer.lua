@@ -1,6 +1,10 @@
 local status_ok, renamer = pcall(require, "renamer")
 if not status_ok then
-	vim.notify("[WARNING] renamer module not found. renamer support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] renamer module not found. renamer support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 

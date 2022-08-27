@@ -1,6 +1,10 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
-	vim.notify("[WARNING] whichkey module not found. which-key support disabled.", vim.log.levels.WARN, {title = 'Nvim-config'})
+	vim.notify(
+		"[WARNING] whichkey module not found. which-key support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
 	return
 end
 
