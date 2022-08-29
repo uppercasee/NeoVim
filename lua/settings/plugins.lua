@@ -176,6 +176,7 @@ return packer.startup(function(use)
 
 	-- surround
 	use("kylechui/nvim-surround")
+	-- use("ur4ltz/surround.nvim")
 
 	-- Search and replace
 	use("windwp/nvim-spectre")
@@ -248,7 +249,7 @@ return packer.startup(function(use)
 	-- use("pwntester/octo.nvim")
 	-- use("monaqa/dial.nvim")
 	-- use("folke/zen-mode.nvim")
-	-- use("lalitmee/browse.nvim")
+	use("lalitmee/browse.nvim")
 	-- use("B4mbus/todo-comments.nvim")
 	-- Session
 	-- use("rmagatti/auto-session")

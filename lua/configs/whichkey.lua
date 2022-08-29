@@ -116,7 +116,6 @@ local m_mappings = {
 local mappings = {
 	-- ["1"] = "which_key_ignore",
 	a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Action" },
-	b = { "<cmd>Telescope buffers<CR>", "Buffers" },
 	e = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
 	v = { "<cmd>vsplit<CR>", "vsplit" },
 	-- h = { "<cmd>split<CR>", "split" },
@@ -125,7 +124,6 @@ local mappings = {
 	q = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" },
 	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
 	-- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-	c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 
 	-- :lua require'lir.float'.toggle()
 	-- ["f"] = {
@@ -138,10 +136,17 @@ local mappings = {
 	-- ["z"] = { "<cmd>ZenMode<CR>", "Zen" },
 	["gy"] = "Link",
 
+	b = {
+		name = "Buffer",
+		b = { "<cmd>Telescope buffers<CR>", "Buffers" },
+		c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	},
+
 	B = {
 		name = "Browse",
 		i = { "<cmd>BrowseInputSearch<CR>", "Input Search" },
 		b = { "<cmd>Browse<CR>", "Browse" },
+		B = { "<cmd>BrowseBookmarks<cr>", "Input Search" },
 		d = { "<cmd>BrowseDevdocsSearch<CR>", "Devdocs" },
 		f = { "<cmd>BrowseDevdocsFiletypeSearch<CR>", "Devdocs Filetype" },
 		m = { "<cmd>BrowseMdnSearch<CR>", "Mdn" },
@@ -172,19 +177,6 @@ local mappings = {
 	--   s = { "<cmd>split<CR>", "HSplit" },
 	--   v = { "<cmd>vsplit<CR>", "VSplit" },
 	-- },
-
-	s = {
-		name = "Session",
-		s = { "<cmd>SaveSession<CR>", "Save" },
-		r = { "<cmd>RestoreSession<CR>", "Restore" },
-		x = { "<cmd>DeleteSession<CR>", "Delete" },
-		f = { "<cmd>Autosession search<CR>", "Find" },
-		d = { "<cmd>Autosession delete<CR>", "Find Delete" },
-		-- a = { ":SaveSession<CR>", "test" },
-		-- a = { ":RestoreSession<CR>", "test" },
-		-- a = { ":RestoreSessionFromFile<CR>", "test" },
-		-- a = { ":DeleteSession<CR>", "test" },
-	},
 
 	r = {
 		name = "Replace",
@@ -300,17 +292,24 @@ local mappings = {
 		u = { "<cmd>LuaSnipUnlinkCurrent<CR>", "Unlink Snippet" },
 	},
 
-	-- s = {
-	--   name = "Surround",
-	--   ["."] = { "<cmd>lua require('surround').repeat_last()<CR>", "Repeat" },
-	--   a = { "<cmd>lua require('surround').surround_add(true)<CR>", "Add" },
-	--   d = { "<cmd>lua require('surround').surround_delete()<CR>", "Delete" },
-	--   r = { "<cmd>lua require('surround').surround_replace()<CR>", "Replace" },
-	--   q = { "<cmd>lua require('surround').toggle_quotes()<CR>", "Quotes" },
-	--   b = { "<cmd>lua require('surround').toggle_brackets()<CR>", "Brackets" },
-	-- },
+	s = {
+		name = "Surround",
+	},
 
 	S = {
+		name = "Session",
+		s = { "<cmd>SaveSession<CR>", "Save" },
+		r = { "<cmd>RestoreSession<CR>", "Restore" },
+		x = { "<cmd>DeleteSession<CR>", "Delete" },
+		f = { "<cmd>Autosession search<CR>", "Find" },
+		d = { "<cmd>Autosession delete<CR>", "Find Delete" },
+		-- a = { ":SaveSession<CR>", "test" },
+		-- a = { ":RestoreSession<CR>", "test" },
+		-- a = { ":RestoreSessionFromFile<CR>", "test" },
+		-- a = { ":DeleteSession<CR>", "test" },
+	},
+
+	R = {
 		-- name = "Session",
 		-- s = { "<cmd>SaveSession<CR>", "Save" },
 		-- l = { "<cmd>LoadLastSession!<CR>", "Load Last" },
