@@ -11,6 +11,7 @@ end
 local actions = require("telescope.actions")
 telescope.load_extension("media_files")
 telescope.load_extension("notify")
+telescope.load_extension("harpoon")
 local icons = require("configs.icons")
 
 telescope.setup({

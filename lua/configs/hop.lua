@@ -12,7 +12,7 @@ keymap("", "<leader>L", ":HopWordCurrentLine<cr>", { silent = true })
 -- keymap("", "S", ":HopChar2<cr>", { silent = true })
 -- keymap("", "Q", ":HopPattern<cr>", { silent = true })
 keymap("", "<leader>H", ":HopPattern<cr>", { silent = true })
-keymap("", "H", ":HopChar2<cr>", { silent = true })
+-- keymap("", "H", ":HopChar2<cr>", { silent = true })
 
 keymap(
 	"o",
