@@ -8,19 +8,32 @@ if not status_ok then
 	return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-	vim.notify(
-		"[WARNING] nvim-tree.config module not found. nvim-tree support disabled.",
-		vim.log.levels.WARN,
-		{ title = "Nvim-config" }
-	)
-	return
-end
+-- local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+-- if not config_status_ok then
+-- 	vim.notify(
+-- 		"[WARNING] nvim-tree.config module not found. nvim-tree support disabled.",
+-- 		vim.log.levels.WARN,
+-- 		{ title = "Nvim-config" }
+-- 	)
+-- 	return
+-- end
 
+
+-- nvim_tree.setup({
+--   sort_by = "case_sensitive",
+--   view = {
+--     width = 30,
+--   },
+--   renderer = {
+--     group_empty = true,
+--   },
+--   filters = {
+--     dotfiles = true,
+--   },
+-- })
 local icons = require("configs.icons")
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
+--local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
 	hijack_directories = {
@@ -32,11 +45,11 @@ nvim_tree.setup({
 	-- disable_netrw = true,
 	-- hijack_netrw = true,
 	-- open_on_setup = false,
-	ignore_ft_on_setup = {
-		"startify",
-		"dashboard",
-		"alpha",
-	},
+	-- ignore_ft_on_setup = {
+	-- 	"startify",
+	-- 	"dashboard",
+	-- 	"alpha",
+	-- },
 	filters = {
 		custom = { ".git" },
 		exclude = { ".gitignore" },
@@ -131,21 +144,21 @@ nvim_tree.setup({
 		ignore = true,
 		timeout = 500,
 	},
-	view = {
-		width = 30,
-		height = 30,
-		hide_root_folder = false,
-		side = "left",
-		-- auto_resize = true,
-		mappings = {
-			custom_only = false,
-			list = {
-				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-				{ key = "h", cb = tree_cb("close_node") },
-				{ key = "v", cb = tree_cb("vsplit") },
-			},
-		},
-		number = false,
-		relativenumber = false,
-	},
+	-- view = {
+	-- 	width = 30,
+	-- 	height = 30,
+	-- 	hide_root_folder = false,
+	-- 	side = "left",
+	-- 	-- auto_resize = true,
+	-- 	mappings = {
+	-- 		custom_only = false,
+	-- 		list = {
+	-- 			-- { key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
+	-- 			-- { key = "h", cb = tree_cb("close_node") },
+	-- 			-- { key = "v", cb = tree_cb("vsplit") },
+	-- 		},
+	-- 	},
+	--  number = false,
+	-- 	relativenumber = false,
+	-- },
 })

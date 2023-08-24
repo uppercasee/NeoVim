@@ -139,7 +139,7 @@ return packer.startup(function(use)
 	use("junegunn/vim-slash")
 
 	-- File Explorer
-	use("kyazdani42/nvim-tree.lua")
+	use("nvim-tree/nvim-tree.lua")
 
 	-- Fuzzy Finder/Telescope
 	use("nvim-telescope/telescope.nvim")
