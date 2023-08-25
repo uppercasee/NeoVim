@@ -1,80 +1,90 @@
-M = {}
-local status_ok, _ = pcall(require, "lspconfig")
+local status_ok, lsp = pcall(require, "lsp-zero")
 if not status_ok then
 	vim.notify(
-		"[WARNING] lspconfig module not found. lspconfig support disabled.",
+		"[WARNING] lsp-zero module not found. lsp-zero support disabled.",
 		vim.log.levels.WARN,
-		{ title = "Nvim-LSP" }
+		{ title = "Nvim-config" }
 	)
 	return
 end
 
-M.server_capabilities = function()
-	local active_clients = vim.lsp.get_active_clients()
-	local active_client_map = {}
+-- local status_ok, lspconfig = pcall(require, "lspconfig")
+-- if not status_ok then
+-- 	vim.notify(
+-- 		"[WARNING] lspconfig module not found. lspconfig support disabled.",
+-- 		vim.log.levels.WARN,
+-- 		{ title = "Nvim-config" }
+-- 	)
+-- 	return
+-- end
 
-	for index, value in ipairs(active_clients) do
-		active_client_map[value.name] = index
-	end
+lsp.preset("recommended")
 
-	vim.ui.select(vim.tbl_keys(active_client_map), {
-		prompt = "Select client:",
-		format_item = function(item)
-			return "capabilites for: " .. item
-		end,
-	}, function(choice)
-		-- print(active_client_map[choice])
-		print(
-			vim.inspect(
-				vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities.executeCommandProvider
-			)
-		)
-		vim.pretty_print(vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities)
-	end)
-end
+lsp.ensure_installed({
+  'tsserver',
+  'rust_analyzer',
+})
 
-require("lsp.lsp-signature")
--- require "lsp.lsp-installer"
-require("lsp.mason")
-require("lsp.handlers").setup()
-require("lsp.null-ls")
+-- Fix Undefined global 'vim'
+lsp.nvim_workspace()
 
-local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
-if not l_status_ok then
-	vim.notify(
-		"[WARNING] lsp_lines module not found. lsp_lines support disabled.",
-		vim.log.levels.WARN,
-		{ title = "Nvim-LSP" }
-	)
-	return
-end
+local cmp = require('cmp')
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_mappings = lsp.defaults.cmp_mappings({
+  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+  ["<C-Space>"] = cmp.mapping.complete(),
+})
 
-local status_ok, hints = pcall(require, "lsp-inlayhints")
-if not status_ok then
-	vim.notify(
-		"[WARNING] lsp-inlayhints module not found. lsp-inlayhints support disabled.",
-		vim.log.levels.WARN,
-		{ title = "Nvim-LSP" }
-	)
-	return
-end
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
 
-hints.on_attach(client, bufnr)
--- For >0.8, you can use the LspAttach event:
--- vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
--- vim.api.nvim_create_autocmd("LspAttach", {
--- 	group = "LspAttach_inlayhints",
--- 	callback = function(args)
--- 	  if not (args.data and args.data.client_id) then
--- 		return
--- 	  end
+lsp.setup_nvim_cmp({
+  mapping = cmp_mappings
+})
 
--- 	  local bufnr = args.buf
--- 	  local client = vim.lsp.get_client_by_id(args.data.client_id)
--- 	  hints.on_attach(client, bufnr)
--- 	end,
---   })
+lsp.set_preferences({
+    suggest_lsp_servers = false,
+    sign_icons = {
+        error = 'E',
+        warn = 'W',
+        hint = 'H',
+        info = 'I'
+    }
+})
 
-lsp_lines.setup()
+lsp.on_attach(function(client, bufnr)
+  local opts = {buffer = bufnr, remap = false}
 
-return M
+  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+end)
+
+lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true
+})
+
+-- local lsp = lspzero.preset({})
+--
+-- lsp.on_attach(function(client, bufnr)
+--   -- see :help lsp-zero-keybindings
+--   -- to learn the available actions
+--   lsp.default_keymaps({buffer = bufnr})
+-- end)
+--
+-- -- (Optional) Configure lua language server for neovim
+-- lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+--
+-- require("lsp.mason")
+-- lsp.setup()

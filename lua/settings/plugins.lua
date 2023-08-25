@@ -52,6 +52,21 @@ return packer.startup(function(use)
 	use("folke/lua-dev.nvim")
 
 	-- LSP
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {'williamboman/mason.nvim'},           -- Optional
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+  
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+    }
+  }
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
@@ -64,7 +79,7 @@ return packer.startup(function(use)
 	use("lvimuser/lsp-inlayhints.nvim")
 	use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
 	use("christianchiarulli/lsp-inlay-hints")
-	use("j-hui/fidget.nvim")
+	use({"j-hui/fidget.nvim", tag='legacy'})
 	-- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 	-- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 	-- use "glepnir/lspsaga.nvim" -- lspsaga
@@ -81,17 +96,21 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use({ "tzachar/cmp-tabnine", commit = "1a8fd2795e4317fd564da269cc64a2fa17ee854e", run = "./install.sh" })
 	-- Github Copilot
-	use("zbirenbaum/copilot-cmp")
-	use({
-		"zbirenbaum/copilot.lua",
-		event = { "VimEnter" },
-		config = function()
-			vim.defer_fn(function()
-				require("copilot")
-			end, 100)
-		end,
-	}) -- replacement for github/copilot.vim
-
+	use {
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
+  config = function()
+    require("copilot").setup({})
+  end,
+}
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+}
 	-- Debugging
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
@@ -200,8 +219,8 @@ return packer.startup(function(use)
 
 	-- Syntax/Treesitter
 	use("nvim-treesitter/nvim-treesitter")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use("p00f/nvim-ts-rainbow")
+	-- use("JoosepAlviste/nvim-ts-context-commentstring")
+	-- use("p00f/nvim-ts-rainbow")
 	use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
 	use("nvim-treesitter/nvim-treesitter-textobjects")
