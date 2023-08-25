@@ -171,7 +171,7 @@ If you still have an issue, [open a new issue](https://github.com/uppercasee/Neo
 - [ ] idk, Too many things
 
 
-<style>
+<!-- <style>
   .image-container {
     display: flex;
     justify-content: center;
@@ -201,4 +201,4 @@ If you still have an issue, [open a new issue](https://github.com/uppercasee/Neo
       max-width: 100%; /* Allow images to take the full width on smaller screens */
     }
   }
-</style>
+</style> -->
