@@ -28,6 +28,19 @@
 
 This is my Neovim configuration, customized to suit my workflow and preferences. I've included various plugins to enhance my coding experience. Feel free to use this configuration as a starting point for your own Neovim setup.
 
+## Neovim in Action
+
+Below are some screenshots of Neovim in action.
+<!-- ![Neovim Start](/assets/neovim_start.png)
+
+![Neovim Editor](/assets/neovim_editor.png) -->
+
+<div class="image-container">
+  <img src="/assets/neovim_start.png" alt="Neovim Start" class="responsive-image" />
+  <img src="/assets/neovim_editor.png" alt="Neovim Editor" class="responsive-image" />
+</div>
+
+
 ## Installation
 
 1. Make sure you have [Neovim]("https://github.com/neovim/neovim/wiki/Installing-Neovim") installed on your system.
@@ -156,3 +169,36 @@ If you still have an issue, [open a new issue](https://github.com/uppercasee/Neo
 
 ### TODO:
 - [ ] idk, Too many things
+
+
+<style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap on small screens */
+    /* gap: 2px; */
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px; /* Add some spacing between images */
+    border: 2px solid #ddd; /* Add a subtle border around images */
+    border-radius: 5px; /* Add rounded corners to images */
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Apply styles for screens up to 768px wide */
+    .responsive-image {
+      max-width: 45%; /* Adjust the width for smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Apply styles for screens up to 480px wide (e.g., mobile devices) */
+    .responsive-image {
+      max-width: 100%; /* Allow images to take the full width on smaller screens */
+    }
+  }
+</style>
