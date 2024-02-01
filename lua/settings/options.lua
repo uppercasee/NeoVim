@@ -65,3 +65,5 @@ vim.filetype.add({
 		conf = "dosini",
 	},
 })
+
+vim.loader.enable()

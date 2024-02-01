@@ -35,7 +35,7 @@ dashboard.section.buttons.val = {
 	-- dashboard.button("s", icons.ui.SignIn .. " Find Session", ":silent Autosession search <CR>"),
 	button("s", icons.ui.SignIn .. " Find Session", ":SearchSession<CR>"),
 	button("c", icons.ui.Gear .. " Config", ":e ~/.config/nvim/init.lua <CR>"),
-	button("u", icons.ui.CloudDownload .. " Update", ":PackerSync<CR>"),
+	button("u", icons.ui.CloudDownload .. " Update", ":Lazy sync<CR>"),
 	button("q", icons.ui.SignOut .. " Quit", ":qa<CR>"),
 }
 local function footer()

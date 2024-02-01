@@ -3,7 +3,7 @@ if not status_ok then
 	vim.notify("[WARNING] hop module not found. hop support disabled.", vim.log.levels.WARN, { title = "Nvim-config" })
 	return
 end
-hop.setup()
+hop.setup{ keys = 'etovxqpdygfblzhckisuran' }
 
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
@@ -54,12 +54,12 @@ keymap(
 keymap(
 	"n",
 	"t",
-	":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<CR>",
+	":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false})<CR>",
 	opts
 )
 keymap(
 	"n",
 	"T",
-	":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<CR>",
+	":lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false})<CR>",
 	opts
 )

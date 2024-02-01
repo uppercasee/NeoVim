@@ -10,50 +10,52 @@ end
 
 local icons = require("configs.icons")
 
-notify.setup({
-	-- Animation style (see below for details)
-	stages = "fade_in_slide_out",
+notify.setup({})
 
-	-- Function called when a new window is opened, use for changing win settings/config
-	on_open = nil,
+-- notify.setup({
+-- 	-- Animation style (see below for details)
+-- 	stages = "fade_in_slide_out",
 
-	-- Function called when a window is closed
-	on_close = nil,
+-- 	-- Function called when a new window is opened, use for changing win settings/config
+-- 	on_open = nil,
 
-	-- Render function for notifications. See notify-render()
-	render = "minimal",
-  -- render = "default",
+-- 	-- Function called when a window is closed
+-- 	on_close = nil,
 
-	-- Default timeout for notifications
-	timeout = 5000,
+-- 	-- Render function for notifications. See notify-render()
+-- 	render = "minimal",
+--   -- render = "default",
 
-	-- For stages that change opacity this is treated as the highlight behind the window
-	-- Set this to either a highlight group or an RGB hex value e.g. "#000000"
-	background_colour = "Normal",
+-- 	-- Default timeout for notifications
+-- 	timeout = 5000,
 
-	-- Minimum width for notification windows
-	minimum_width = 20,
+-- 	-- For stages that change opacity this is treated as the highlight behind the window
+-- 	-- Set this to either a highlight group or an RGB hex value e.g. "#000000"
+-- 	-- background_colour = "Normal",
 
-	-- Icons for the different levels
-	icons = {
-		ERROR = icons.diagnostics.Error,
-		WARN = icons.diagnostics.Warning,
-		INFO = icons.diagnostics.Information,
-		DEBUG = icons.ui.Bug,
-		TRACE = icons.ui.Pencil,
-	},
-})
+-- 	-- Minimum width for notification windows
+-- 	minimum_width = 20,
 
-vim.notify = notify
+-- 	-- Icons for the different levels
+-- 	icons = {
+-- 		ERROR = icons.diagnostics.Error,
+-- 		WARN = icons.diagnostics.Warning,
+-- 		INFO = icons.diagnostics.Information,
+-- 		DEBUG = icons.ui.Bug,
+-- 		TRACE = icons.ui.Pencil,
+-- 	},
+-- })
 
-local notify_filter = vim.notify
-vim.notify = function(msg, ...)
-	if msg:match("character_offset must be called") then
-		return
-	end
-	if msg:match("method textDocument") then
-		return
-	end
+-- vim.notify = notify
 
-	notify_filter(msg, ...)
-end
+-- local notify_filter = vim.notify
+-- vim.notify = function(msg, ...)
+-- 	if msg:match("character_offset must be called") then
+-- 		return
+-- 	end
+-- 	if msg:match("method textDocument") then
+-- 		return
+-- 	end
+
+-- 	notify_filter(msg, ...)
+-- end
