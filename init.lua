@@ -1,9 +1,8 @@
 -- settings
-require("settings.colorschemes")
-require("settings.keymaps")
-require("settings.options")
-require("settings.plugins")
-require("configs.notify")
+require("colorschemes")
+require("keymaps")
+require("options")
+require("plugins")
 
 -- plugins
 require("configs.alpha")
@@ -14,6 +13,7 @@ require("configs.comments")
 require("configs.hop")
 require("configs.icons")
 require("configs.lualine")
+require("configs.notify")
 require("configs.nvim-tree")
 require("configs.surround")
 require("configs.telescope")
