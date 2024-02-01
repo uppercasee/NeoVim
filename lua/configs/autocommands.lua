@@ -187,3 +187,17 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 		vim.lsp.buf.format({ async = true })
 	end,
 })
+
+-- create autocommands to change colorscheme to catpuccino after startup
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+	callback = function()
+		vim.cmd("colorscheme catppuccin-mocha")
+	end,
+})
+
+-- create autocommands to change lualine colorscheme to catpuccino after startup
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+	callback = function()
+		vim.cmd("lua require('lualine').setup { options = { theme = 'catppuccin-mocha' } }")
+	end,
+})

@@ -29,13 +29,13 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
 	button("f", icons.documents.Files .. " Find file", ":Telescope find_files <CR>"),
 	button("e", icons.ui.NewFile .. " New file", ":ene <BAR> startinsert <CR>"),
-	button("p", icons.git.Repo .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
+	-- button("p", icons.git.Repo .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
 	button("r", icons.ui.History .. " Recent files", ":Telescope oldfiles <CR>"),
 	button("t", icons.ui.List .. " Find text", ":Telescope live_grep <CR>"),
 	-- dashboard.button("s", icons.ui.SignIn .. " Find Session", ":silent Autosession search <CR>"),
-	button("s", icons.ui.SignIn .. " Find Session", ":SearchSession<CR>"),
+	-- button("s", icons.ui.SignIn .. " Find Session", ":SearchSession<CR>"),
 	button("c", icons.ui.Gear .. " Config", ":e ~/.config/nvim/init.lua <CR>"),
-	button("u", icons.ui.CloudDownload .. " Update", ":PackerSync<CR>"),
+	button("u", icons.ui.CloudDownload .. " Update", ":Lazy sync<CR>"),
 	button("q", icons.ui.SignOut .. " Quit", ":qa<CR>"),
 }
 local function footer()
@@ -44,7 +44,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "© 3rk1n"
+	return "© uppercase 2024"
 end
 
 dashboard.section.footer.val = footer()

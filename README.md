@@ -26,7 +26,7 @@
 
 # [NeoVim]("https://neovim.io/") Configuration:
 
-This is my Neovim configuration, customized to suit my workflow and preferences. I've included various plugins to enhance my coding experience. Feel free to use this configuration as a starting point for your own Neovim setup.
+Personal nvim configuration.
 
 ## Neovim in Action
 
@@ -45,21 +45,15 @@ Below are some screenshots of Neovim in action.
 
 1. Make sure you have [Neovim]("https://github.com/neovim/neovim/wiki/Installing-Neovim") installed on your system.
 
-2. Clone this repository to your Neovim configuration directory. Typically, this directory is located at `~/.config/nvim/`.
+2. Clone this repository to your Neovim configuration directory. Typically, this directory is located at `~/.config/nvim/` for linux users.
 
    ```bash
    git clone https://github.com/uppercasee/NeoVim.git ~/.config/nvim
    ```
+  
+Note: Your existing config will be lost so be sure to keep a backup file.
 
-3. Install [Packer.nvim](https://github.com/wbthomason/packer.nvim), the plugin manager used in this configuration.
-
-4. Launch Neovim and run the following command to install the plugins:
-
-   ```vim
-   :PackerInstall
-   ```
-
-## Key Plugins
+<!-- ## Key Plugins
 
 Here are some of the key plugins included in this configuration:
 
@@ -101,7 +95,7 @@ Here are some of the key plugins included in this configuration:
 ### Autosave
 
 - [Pocco81/auto-save.nvim](https://github.com/Pocco81/auto-save.nvim): Automatically save current file(s).
-
+ -->
 
 
 
@@ -134,7 +128,7 @@ Here are some of the key plugins included in this configuration:
 <!-- + Code formatting via [Neoformat](https://github.com/sbdchd/neoformat). -->
 <!-- + Undo management via [vim-mundo](https://github.com/simnalamburt/vim-mundo) -->
 
-## Dependencies
+<!-- ## Dependencies
 
 Before using this Neovim configuration, make sure you have the following dependencies installed on your system:
 
@@ -156,16 +150,16 @@ Before using this Neovim configuration, make sure you have the following depende
 
     ```shell
     pip install black
-    ```
+    ``` -->
 
-## Contributing
+<!-- ## Contributing
 
 If you find anything that needs improving, do not hesitate to point it out or create a PR.
 
 If you come across an issue, you can first use `:checkhealth` command provided by `nvim` to trouble-shoot yourself.
 Please read carefully the messages provided by health check.
 
-If you still have an issue, [open a new issue](https://github.com/uppercasee/NeoVim/issues).
+If you still have an issue, [open a new issue](https://github.com/uppercasee/NeoVim/issues). -->
 
 ### TODO:
 - [ ] idk, Too many things
