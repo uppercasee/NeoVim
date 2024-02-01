@@ -25,7 +25,6 @@ local plugins = {
 	{"nvim-lua/plenary.nvim"}, -- Useful lua functions used by lots of plugins
 	{"folke/lua-dev.nvim"}, -- Lua development
   {"nvim-tree/nvim-web-devicons"}, 
-  ("folke/twilight.nvim"), -- Dim inactive portions of the code you're editing
 
   -- COMPLETION
   {"hrsh7th/nvim-cmp"}, -- Autocompletion plugin
@@ -34,7 +33,6 @@ local plugins = {
   {"hrsh7th/cmp-path"}, -- path completions
   {"hrsh7th/cmp-nvim-lsp"},
   {"hrsh7th/cmp-nvim-lua"},
-  {"tzachar/cmp-tabnine", run='./install.sh'},
   {"L3MON4D3/LuaSnip"}, -- snippet engine
 
   -- LSP
@@ -92,7 +90,8 @@ lazy.setup({ plugins, opts }, {
 	--        [Undo Tree]
 	-- "mbbill/undotree",
 
-    -- THEMES
+    -- UI/THEMES
+  -- ("folke/twilight.nvim"), -- Dim inactive portions of the code you're editing
 -- 	("lunarvim/darkplus.nvim")
 	-- ("tanvirtin/monokai.nvim"),
   -- 	("NvChad/nvim-colorizer.lua")
@@ -106,6 +105,7 @@ lazy.setup({ plugins, opts }, {
   -- 	-- use { "catppuccin/nvim", as = "catppuccin" }
 
 -- 	-- Completion
+-- {"tzachar/cmp-tabnine", run='./install.sh'},
   -- {
   --   "zbirenbaum/copilot-cmp",
   --   config = function ()

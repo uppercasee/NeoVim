@@ -10,12 +10,6 @@ if not snip_status_ok then
 	return
 end
 
--- local tabnine_status_ok, tabnine = pcall(require, "configs.tabnine")
--- if not tabnine_status_ok then
--- 	vim.notify( "[WARNING] Tabnine module not found. Tabnine support disabled.", vim.log.levels.WARN, { title = "Nvim-config" })
--- 	return
--- end
-
 local has_words_before = function()
     if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
