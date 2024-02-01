@@ -29,59 +29,55 @@ local plugins = {
 
   -- COMPLETION
   {"hrsh7th/nvim-cmp"}, -- Autocompletion plugin
-  -- {"hrsh7th/cmp-buffer"}, -- buffer completions
-  -- {"hrsh7th/cmp-path"}, -- path completions
-  -- {"hrsh7th/cmp-cmdline"}, -- cmdline completions
-  -- {"saadparwaiz1/cmp_luasnip"}, -- snippet completions
-  -- {"hrsh7th/cmp-nvim-lsp"},
-  -- {"hrsh7th/cmp-emoji"},
-  -- {"hrsh7th/cmp-nvim-lua"},
+  {"hrsh7th/cmp-buffer"}, -- buffer completions
+  {"hrsh7th/cmp-cmdline"}, -- cmdline completions
+  {"hrsh7th/cmp-path"}, -- path completions
+  {"hrsh7th/cmp-nvim-lsp"},
+  {"hrsh7th/cmp-nvim-lua"},
   {"tzachar/cmp-tabnine", run='./install.sh'},
-  -- {"hrsh7th/cmp-vsnip"}, -- vsnip completions
-  -- {"hrsh7th/vim-vsnip"}, -- vsnip
-  -- {"rafamadriz/friendly-snippets"}, -- a bunch of snippets to use
   {"L3MON4D3/LuaSnip"}, -- snippet engine
-  -- {"antoinemadec/FixCursorHold.nvim"}, -- This is needed to fix lsp doc highlight
-  {"folke/trouble.nvim"}, -- A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 
   -- LSP
+  {'neovim/nvim-lspconfig'},             -- Required
+  {'williamboman/mason.nvim'},           -- Optional
+  {'williamboman/mason-lspconfig.nvim'},
+  {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v3.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},
+        {'williamboman/mason.nvim'},
+        {'williamboman/mason-lspconfig.nvim'},
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},
+        {'hrsh7th/cmp-nvim-lsp'},
+        {'L3MON4D3/LuaSnip'},
+      }
+    },
 
-  -- THEMES
-	-- {"tanvirtin/monokai.nvim"},
+  -- UI
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	-- Autosave
-	{"Pocco81/auto-save.nvim"}, -- Automatically save current file(s)
-  -- Buffer
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-
-  -- 	-- File Explorer
 	{"nvim-tree/nvim-tree.lua"},
-  
-  -- Fuzzy Finder/Telescope
 	{"nvim-telescope/telescope.nvim"},
 	{"nvim-telescope/telescope-media-files.nvim"},
-
-  -- STATUSLINE
   {'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }},
-
-  --Comment
-  {'numToStr/Comment.nvim'},
-
-  -- 	-- Syntax/Treesitter
 	{"nvim-treesitter/nvim-treesitter"},
 
-  -- 	-- surround
-	{"kylechui/nvim-surround"},
-	{"lvimuser/lsp-inlayhints.nvim"},
-
   -- Utilities
+  {"Pocco81/auto-save.nvim"}, -- Automatically save current file(s)
+  {'numToStr/Comment.nvim'},
   {"rcarriga/nvim-notify"}, -- A fancy, configurable, notification manager for NeoVim
   {"ThePrimeagen/harpoon"}, -- A mark and teleportation plugin for neovim
   {"folke/which-key.nvim"}, -- A lua implementation of the ever so popular which-key plugin for vim
 	{"akinsho/toggleterm.nvim"}, -- Terminal
   {"goolord/alpha-nvim"}, -- front page of neovim
 	{'smoka7/hop.nvim'}, -- Motion
-
+  {"windwp/nvim-autopairs"}, -- Autopairs, integrates with both cmp and treesitter
+  {"folke/trouble.nvim"}, -- A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+  {"kylechui/nvim-surround"},
+	{"lvimuser/lsp-inlayhints.nvim"},
 }
 
 -- PLUGINS
@@ -108,39 +104,34 @@ lazy.setup({ plugins, opts }, {
   -- 	-- use "marko-cerovac/material.nvim"
   -- 	-- use 'navarasu/onedark.nvim'
   -- 	-- use { "catppuccin/nvim", as = "catppuccin" }
--- 	-- LSP
---   {
---     'VonHeikemen/lsp-zero.nvim',
---     branch = 'v2.x',
---     requires = {
---       -- LSP Support
---       {'neovim/nvim-lspconfig'},             -- Required
---       {'williamboman/mason.nvim'},           -- Optional
---       {'williamboman/mason-lspconfig.nvim'}, -- Optional
---       -- Autocompletion
---       {'hrsh7th/nvim-cmp'},     -- Required
---       {'hrsh7th/cmp-nvim-lsp'}, -- Required
---       {'L3MON4D3/LuaSnip'},     -- Required
---     }
---   },
--- 	("neovim/nvim-lspconfig"), -- enable LSP
--- 	("williamboman/mason.nvim"),
--- 	("williamboman/mason-lspconfig.nvim"),
--- 	("jose-elias-alvarez/null-ls.nvim"), -- for formatters and linters
--- 	("ray-x/lsp_signature.nvim"),
--- 	("SmiteshP/nvim-navic"),
--- 	("simrat39/symbols-outline.nvim"),
--- 	("b0o/SchemaStore.nvim"),
--- 	("RRethy/vim-illuminate"),
--- 	("https://git.sr.ht/~whynothugo/lsp_lines.nvim"),
--- 	("christianchiarulli/lsp-inlay-hints"),
--- 	({"j-hui/fidget.nvim", tag='legacy'}),
--- 	-- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
--- 	-- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
--- 	-- use "glepnir/lspsaga.nvim" -- lspsaga
--- 	-- use "simrat39/inlay-hints.nvim"
 
 -- 	-- Completion
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   config = function ()
+  --     require("copilot_cmp").setup({
+  --       event = { "InsertEnter", "LspAttach" },
+  --       fix_pairs = true,
+  --     })
+  --   end
+  -- },  
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup({
+  --       suggestion = { enabled = false },
+  --       panel = { enabled = false },
+  --     })
+  --   end,
+  -- },
+  -- {"saadparwaiz1/cmp_luasnip"}, -- snippet completions
+  -- {"hrsh7th/cmp-emoji"},
+  -- {"hrsh7th/cmp-vsnip"}, -- vsnip completions
+  -- {"hrsh7th/vim-vsnip"}, -- vsnip
+  -- {"rafamadriz/friendly-snippets"}, -- a bunch of snippets to use
+  -- {"antoinemadec/FixCursorHold.nvim"}, -- This is needed to fix lsp doc highlight
 -- 	("christianchiarulli/nvim-cmp")
 -- 	("hrsh7th/cmp-buffer") -- buffer completions
 -- 	("hrsh7th/cmp-path") -- path completions
@@ -190,7 +181,6 @@ lazy.setup({ plugins, opts }, {
 
 -- 	-- Editing Support
 -- 	("max397574/better-escape.nvim") -- using 'jk' to revert back to normal mode
--- 	("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 -- 	("karb94/neoscroll.nvim") -- Smooth scrolling plugin
 -- 	("nacro90/numb.nvim")
 -- 	("andymass/vim-matchup")

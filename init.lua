@@ -3,14 +3,13 @@ require("settings.colorschemes")
 require("settings.keymaps")
 require("settings.options")
 require("settings.plugins")
--- require("settings.impatient")
 require("configs.notify")
 
 -- plugins
 require("configs.alpha")
 require("configs.autocommands")
+require("configs.autopairs")
 require("configs.autosave")
-require("configs.cmp")
 require("configs.comments")
 require("configs.hop")
 require("configs.icons")
@@ -22,11 +21,11 @@ require("configs.toggleterm")
 require("configs.trouble")
 require("configs.whichkey")
 
--- LSP
-require("lsp")
+-- LSP & autocompletions
+require("configs.cmp")
+require("configs.lsp")
 
 -- unused plugins
--- require("configs.autopairs")
 -- require("configs.better_escape")
 -- require("configs.bufferline") -- TODO: remove bufferline
 -- require("configs.colorizer")

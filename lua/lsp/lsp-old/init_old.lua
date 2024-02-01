@@ -8,25 +8,17 @@ if not status_ok then
 	return
 end
 
--- local status_ok, lspconfig = pcall(require, "lspconfig")
--- if not status_ok then
--- 	vim.notify(
--- 		"[WARNING] lspconfig module not found. lspconfig support disabled.",
--- 		vim.log.levels.WARN,
--- 		{ title = "Nvim-config" }
--- 	)
--- 	return
--- end
+local status_ok, lspconfig = pcall(require, "lspconfig")
+if not status_ok then
+	vim.notify(
+		"[WARNING] lspconfig module not found. lspconfig support disabled.",
+		vim.log.levels.WARN,
+		{ title = "Nvim-config" }
+	)
+	return
+end
 
 lsp.preset("recommended")
-
-lsp.ensure_installed({
-  'tsserver',
-  'rust_analyzer',
-})
-
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}

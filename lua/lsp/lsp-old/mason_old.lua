@@ -50,6 +50,9 @@ mason.setup(settings)
 mason_lspconfig.setup {
   ensure_installed = servers,
   automatic_installation = true,
+  handlers = {
+    lsp_zero.default_setup,
+  }
 }
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
