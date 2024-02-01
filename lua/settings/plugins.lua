@@ -235,7 +235,7 @@ lazy.setup({ plugins, opts }, {
 -- 	-- }
 -- 	("christianchiarulli/lualine.nvim")
 
--- 	-- Syntax/Treesitter
+-- 	-- Syntax/
 -- 	("nvim-treesitter/nvim-treesitter")
 -- 	-- use("JoosepAlviste/nvim-ts-context-commentstring")
 -- 	-- use("p00f/nvim-ts-rainbow")
