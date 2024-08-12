@@ -55,6 +55,8 @@ local plugins = {
     },
 
   -- UI
+	("tanvirtin/monokai.nvim"),
+  {"Mofiqul/dracula.nvim"},
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 	{"nvim-tree/nvim-tree.lua"},
@@ -76,6 +78,7 @@ local plugins = {
   {"folke/trouble.nvim"}, -- A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
   {"kylechui/nvim-surround"},
 	{"lvimuser/lsp-inlayhints.nvim"},
+	{"christoomey/vim-tmux-navigator"},
 }
 
 -- PLUGINS
@@ -98,7 +101,6 @@ lazy.setup({ plugins, opts }, {
   -- 	("xiyaowong/nvim-transparent")
   -- 	("ziontee113/color-picker.nvim")
   -- 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- 	-- use "Mofiqul/dracula.nvim"
   -- 	-- use "lunarvim/darkplus.nvim"
   -- 	-- use "marko-cerovac/material.nvim"
   -- 	-- use 'navarasu/onedark.nvim'

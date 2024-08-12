@@ -33,7 +33,7 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ["<C-s>"] = cmp.mapping.abort(),
 		['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ["<S-CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
         ["<C-CR>"] = cmp.mapping.confirm({ select = true }),
         ["<Tab>"] = vim.schedule_wrap(function(fallback)
             if cmp.visible() and has_words_before() then
