@@ -25,6 +25,14 @@
 </div>
 
 # [NeoVim]("https://neovim.io/") Configuration:
+**DOING THESE AGAIN CUZ IM BORED**
+---
+---
+---
+---
+---
+---
+---
 
 Personal nvim configuration.
 
