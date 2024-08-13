@@ -31,5 +31,8 @@
 ---
 
 ## TODO:
+- [ ] Need a fix for treesitter and telescope. it doesnt work properly
 - [ ] idk, Too many things
-
+- [ ] maybe add mfussenegger/nvim-dap for debugging
+- [ ] maybe add kndndrj/nvim-dbee for database
+- [ ] also stevearc/oil.nvim seems cool idk
