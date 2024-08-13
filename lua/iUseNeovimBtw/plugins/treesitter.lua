@@ -5,7 +5,11 @@ return {
 		branch = "main",
 		lazy = false,
 		opts = {
-			ensure_installed = "all",
+			ensure_installed = {
+				"javascript", "typescript", "c", "cpp", "python", "rust", "lua", "go", "bash",
+				"json", "html", "css", "yaml", "toml", "make", "markdown", "dockerfile",
+				"vim", "regex", "graphql", "comment", "gitcommit", "vimdoc", "tsx", "jsdoc",
+			},
 			sync_install = false,
 			auto_install = true,
 			indent = {

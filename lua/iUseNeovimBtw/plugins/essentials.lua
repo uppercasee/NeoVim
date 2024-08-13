@@ -7,5 +7,7 @@ return {
     {"pocco81/auto-save.nvim"},
     {"windwp/nvim-autopairs", event = "InsertEnter", config = true},
     {"rcarriga/nvim-notify"},
-    {'lewis6991/gitsigns.nvim', opts = {},}
+    {'lewis6991/gitsigns.nvim', opts = {},},
+    {'jinh0/eyeliner.nvim',}, -- NOTE: helps navigate properly but already have hop??
+    -- {"karb94/neoscroll.nvim", opts = {}}, -- can be used for smooth scrolling
 }
