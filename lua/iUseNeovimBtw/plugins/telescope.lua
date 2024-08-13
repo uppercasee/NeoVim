@@ -14,9 +14,15 @@ return {
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      {"nvim-telescope/telescope-media-files.nvim"},
     },
     config = function()
       require('telescope').setup {
+        defaults = {
+          preview = {
+            treesitter = false,
+          }
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
