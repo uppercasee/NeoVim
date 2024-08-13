@@ -6,5 +6,6 @@ return {
     {"tpope/vim-sleuth"}, -- Detect tabstop and shiftwidth automatically
     {"pocco81/auto-save.nvim"},
     {"windwp/nvim-autopairs", event = "InsertEnter", config = true},
-    {"rcarriga/nvim-notify"}
+    {"rcarriga/nvim-notify"},
+    {'lewis6991/gitsigns.nvim', opts = {},}
 }
