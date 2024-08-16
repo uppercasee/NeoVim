@@ -60,3 +60,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- -- NvimTreeToggle
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- no highlight
+keymap("n", "hl", ":nohl<CR>", opts)
