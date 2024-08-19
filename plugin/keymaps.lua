@@ -63,3 +63,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- no highlight
 keymap("n", "hl", ":nohl<CR>", opts)
+
+-- make the current file executable
+keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
