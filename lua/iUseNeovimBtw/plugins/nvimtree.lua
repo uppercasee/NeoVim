@@ -196,4 +196,3 @@ return {
 --         :window {:position :left :width 25}
 --         :filesystem {:use_libuv_file_watcher true}
 --         :default_component_configs {:indent {:with_markers false}
-

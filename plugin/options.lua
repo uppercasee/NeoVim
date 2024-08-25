@@ -64,4 +64,4 @@ vim.filetype.add({
 
 vim.loader.enable()
 
-vim.cmd[[highlight Normal guibg=none]]
+vim.cmd([[highlight Normal guibg=none]])
