@@ -66,3 +66,6 @@ keymap("n", "hl", ":nohl<CR>", opts)
 
 -- make the current file executable
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
+
+-- i hate macros
+keymap("n", "q","<Nop>", opts)
