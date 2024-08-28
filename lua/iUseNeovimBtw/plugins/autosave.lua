@@ -14,9 +14,9 @@
 			if
 				fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), { "Harpoon" })
 			then
-				return true
+				return false
 			end
-			return false
+			return true
 		end,
 	},
 }
