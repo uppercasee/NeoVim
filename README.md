@@ -29,6 +29,11 @@
 #### Add or Remove any files to [plugins](./lua/iUseNeovimBtw/plugins/) directory for customizations.
 
 ---
+
+![](./assets/neovim_dashboard.png)
+![](./assets/neovim_editor.png)
+
+---
 ## TODO:
 - [ ] Need a fix for treesitter and telescope. it doesnt work properly
 - [ ] maybe add mfussenegger/nvim-dap for debugging
