@@ -57,6 +57,8 @@ keymap(
 return {
 	"hadronized/hop.nvim",
 	branch = "v2", -- optional but strongly recommended
+	cmd = { "HopWord", "HopChar1", "HopChar2", "HopLine", "HopPattern" },  -- Load on specific commands
+  -- event = "VeryLazy",
 	config = function()
 		require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
 	end,

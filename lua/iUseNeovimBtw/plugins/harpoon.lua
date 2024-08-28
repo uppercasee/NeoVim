@@ -2,6 +2,7 @@ return {
 	"ThePrimeagen/harpoon",
 	branch = "harpoon2",
 	dependencies = { "nvim-lua/plenary.nvim" },
+	cmd = { "Harpoon" },  -- Load when `Harpoon` command is called
 	setup = function()
 		local harpoon = require("harpoon")
 		harpoon:setup()

@@ -3,6 +3,7 @@ return {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		event = "VimEnter",  -- Load on VimEnter
 		opts = {
 			flavour = "macchiato", -- latte, frappe, macchiato, mocha
 			background = { dark = "mocha" },
@@ -11,9 +12,9 @@ return {
 			vim.cmd("colorscheme catppuccin")
 		end,
 	},
-	{ "tanvirtin/monokai.nvim" },
-	{ "Mofiqul/dracula.nvim" },
-	{ "lunarvim/darkplus.nvim" },
-	{ "lunarvim/colorschemes" },
-	{ "navarasu/onedark.nvim" },
+	{ "tanvirtin/monokai.nvim", lazy=true},
+	{ "Mofiqul/dracula.nvim" , lazy=true},
+	{ "lunarvim/darkplus.nvim" , lazy=true},
+	{ "lunarvim/colorschemes" , lazy=true},
+	{ "navarasu/onedark.nvim" , lazy=true},
 }
