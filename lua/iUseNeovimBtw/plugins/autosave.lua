@@ -1,4 +1,4 @@
- return {
+return {
 	"okuuva/auto-save.nvim", -- Working fork of Pocco81/auto-save.nvim
 	cmd = "ASToggle", -- optional for lazy loading on command
 	event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
@@ -12,11 +12,11 @@
 			local fn = vim.fn
 			local utils = require("auto-save.utils.data")
 			if
-				fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), { "Harpoon" })
+				fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), { "harpoon" })
 			then
-				return false
+				return true
 			end
-			return true
+			return false
 		end,
 	},
 }

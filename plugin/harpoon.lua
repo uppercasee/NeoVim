@@ -3,6 +3,7 @@ local harpoon = require("harpoon")
 harpoon:setup()
 
 vim.keymap.set("n", "<leader>ba", function() harpoon:list():add() end, { desc = "[A]dd file to Harpoon list" })
+vim.keymap.set("n", "<leader>br", function() harpoon:list():remove() end, { desc = "[R]emove file from Harpoon list" })
 vim.keymap.set("n", "<leader>bm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggle Harpoon [m]enu" })
 
 vim.keymap.set("n", "<leader>b1", function() harpoon:list():select(1) end, { desc = "Select [1] first Harpoon item" })
