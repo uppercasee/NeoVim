@@ -1,17 +1,7 @@
 return {
-
-	{
-		"Mofiqul/dracula.nvim",
-		priority = 1000,
-		event = "VimEnter",
-		config = function()
-			vim.cmd("colorscheme dracula")
-		end,
-	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-    lazy = true,
 		-- priority = 1000,
 		-- event = "VimEnter", -- Load on VimEnter
 		-- opts = {
@@ -22,9 +12,16 @@ return {
 		-- 	vim.cmd("colorscheme catppuccin")
 		-- end,
 	},
-	{ "tanvirtin/monokai.nvim", lazy = true },
-	{ "Mofiqul/dracula.nvim", lazy = true },
-	{ "lunarvim/darkplus.nvim", lazy = true },
-	{ "lunarvim/colorschemes", lazy = true },
-	{ "navarasu/onedark.nvim", lazy = true },
+	{
+		"Mofiqul/dracula.nvim",
+		priority = 1000,
+		event = "VimEnter",
+		config = function()
+			vim.cmd("colorscheme dracula")
+		end,
+	},
+	{ "tanvirtin/monokai.nvim" },
+	{ "lunarvim/darkplus.nvim" },
+	{ "lunarvim/colorschemes" },
+	{ "navarasu/onedark.nvim" },
 }
