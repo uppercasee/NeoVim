@@ -33,5 +33,5 @@ local function toggle_telescope(harpoon_files)
     }):find()
 end
 
-vim.keymap.set("n", "<leader>sb", function() toggle_telescope(harpoon:list()) end,
-    { desc = "[S]each [B]ookmarks" })
+vim.keymap.set("n", "<leader>bs", function() toggle_telescope(harpoon:list()) end,
+    { desc = "[B]ookmarks [S]earch" })
