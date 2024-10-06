@@ -137,8 +137,46 @@ return {
 				clangd = {},
 				gopls = {},
 				pyright = {},
-				rust_analyzer = {},
 				ts_ls = {},
+
+				rust_analyzer = {
+					settings = {
+						["rust-analyzer"] = {
+							diagnostics = {
+								disabled = { "unlinked-file" },
+							},
+							checkOnSave = {
+								command = "clippy",
+							},
+							cargo = {
+								allFeatures = true,
+							},
+							procMacro = {
+								enable = true,
+							},
+							inlayHints = {
+								typeHints = {
+									enable = true,
+								},
+								parameterHints = {
+									enable = true,
+								},
+								chainingHints = {
+									enable = true,
+								},
+								closureReturnTypeHints = {
+									enable = true,
+								},
+							},
+							imports = {
+								granularity = {
+									group = "module",
+								},
+								prefix = "self",
+							},
+						},
+					},
+				},
 
 				lua_ls = {
 					-- cmd = {...},
