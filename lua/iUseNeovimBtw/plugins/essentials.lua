@@ -8,6 +8,7 @@ return {
 	{ "lewis6991/gitsigns.nvim", opts = {}, event = "VeryLazy" },
 	{ "jinh0/eyeliner.nvim", event = "VeryLazy" }, -- NOTE: helps navigate properly but already have hop??
 	{ "numToStr/Comment.nvim", event = "VeryLazy" },
+	{ "windwp/nvim-ts-autotag", opts= {} },
 	-- {"karb94/neoscroll.nvim", opts = {}}, -- can be used for smooth scrolling
 	-- { "tpope/vim-sleuth" }, -- Detect tabstop and shiftwidth automatically
 }

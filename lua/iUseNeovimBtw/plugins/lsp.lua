@@ -138,6 +138,7 @@ return {
 				gopls = {},
 				pyright = {},
 				ts_ls = {},
+				tailwindcss = {},
 
 				rust_analyzer = {
 					settings = {
@@ -151,28 +152,22 @@ return {
 							cargo = {
 								allFeatures = true,
 							},
-							procMacro = {
-								enable = true,
-							},
-							inlayHints = {
-								typeHints = {
-									enable = true,
-								},
-								parameterHints = {
-									enable = true,
-								},
-								chainingHints = {
-									enable = true,
-								},
-								closureReturnTypeHints = {
-									enable = true,
-								},
-							},
 							imports = {
 								granularity = {
 									group = "module",
 								},
 								prefix = "self",
+							},
+
+							lens = {
+								enable = true,
+							},
+							hoverActions = {
+								enable = true,
+							},
+							completion = {
+								addCallArgumentSnippets = true,
+								addCallParenthesis = true,
 							},
 						},
 					},
@@ -210,6 +205,7 @@ return {
 				"prettier",
 				"prettierd",
 				"eslint_d",
+				"black",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
