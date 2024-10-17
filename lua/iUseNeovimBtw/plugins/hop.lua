@@ -1,8 +1,8 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
-keymap("", "<leader>hl", ":HopWordCurrentLine<cr>", { silent = true, desc = "[H]op Current [L]ine" })
-keymap("", "<leader>hp", ":HopPattern<cr>", { silent = true, desc = "[H]op [P]attern" })
+keymap("", "<leader>gl", ":HopWordCurrentLine<cr>", { silent = true, desc = "[G]o to Current [L]ine" })
+keymap("", "<leader>gp", ":HopPattern<cr>", { silent = true, desc = "[G]o to [P]attern" })
 
 return {
 	"smoka7/hop.nvim",

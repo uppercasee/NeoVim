@@ -47,10 +47,11 @@ return {
 
 			-- Document existing key chains
 			require("which-key").add({
-				{ "<leader>b", group = "[B]ookmarks" },
+				{ "<leader>b", group = "[B]uffer" },
 				{ "<leader>c", group = "[C]ode" },
 				{ "<leader>d", group = "[D]ocument" },
-				{ "<leader>h", group = "[H]op" },
+				{ "<leader>g", group = "[G]o" },
+				{ "<leader>h", group = "[H]arpoon" },
 				{ "<leader>r", group = "[R]ename" },
 				{ "<leader>s", group = "[S]earch" },
 				{ "<leader>t", group = "[T]oggle" },
