@@ -37,3 +37,10 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
 	command = "checktime",
 })
+
+-- Autocommand to turn on highlight colors
+vim.api.nvim_create_autocmd("BufReadPost", {
+    callback = function()
+        require("nvim-highlight-colors").turnOn()
+    end,
+})
