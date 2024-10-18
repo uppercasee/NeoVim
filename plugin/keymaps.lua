@@ -69,4 +69,24 @@ keymap("n", "hl", ":nohl<CR>", opts)
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
 
 -- i hate macros
-keymap("n", "q","<Nop>", opts)
+keymap("n", "q", "<Nop>", opts)
+
+-- colorizer
+keymap(
+	"n",
+	"<leader>bc",
+	':lua require("nvim-highlight-colors").turnOn()<CR>',
+	{ desc = "[B]uffer Highlight [C]olor On", noremap = true, silent = true }
+)
+keymap(
+	"n",
+	"<leader>bf",
+	':lua require("nvim-highlight-colors").turnOff()<CR>',
+	{ desc = "[B]uffer Highlight O[f]f", noremap = true, silent = true }
+)
+keymap(
+	"n",
+	"<leader>bt",
+	':lua require("nvim-highlight-colors").toggle()<CR>',
+	{ desc = "[B]uffer Highlight [T]oggle", noremap = true, silent = true }
+)
