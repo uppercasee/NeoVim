@@ -15,6 +15,7 @@ return {
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 			{ "nvim-telescope/telescope-media-files.nvim" },
+			{ "debugloop/telescope-undo.nvim" },
 		},
 		config = function()
 			require("telescope").setup({
@@ -28,11 +29,13 @@ return {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
 					},
+					undo = {},
 				},
 			})
 
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
+			pcall(require("telescope").load_extension, "undo")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch existing [B]uffers" })
@@ -45,7 +48,8 @@ return {
 			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 			vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch [.] in Recent Files' })
+			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = "[S]earch [.] in Recent Files" })
+			vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [u]ndo Tree" })
 
 			-- vim.keymap.set("n", "<leader>/", function()
 			-- 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
