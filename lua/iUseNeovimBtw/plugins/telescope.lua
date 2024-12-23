@@ -49,7 +49,7 @@ return {
 			vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odos" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = "[S]earch [.] in Recent Files" })
-			vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [u]ndo Tree" })
+			vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [U]ndo Tree" })
 
 			-- vim.keymap.set("n", "<leader>/", function()
 			-- 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
