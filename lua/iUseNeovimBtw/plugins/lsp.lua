@@ -139,6 +139,9 @@ return {
 				pyright = {},
 				ts_ls = {},
 				tailwindcss = {},
+				emmet_language_server = {},
+				jsonls = {},
+				cssls = {},
 
 				rust_analyzer = {
 					settings = {
@@ -206,6 +209,10 @@ return {
 				"prettierd",
 				"eslint_d",
 				"black",
+				"stylelint",
+				"jsonlint",
+				"yamllint",
+				"markdownlint",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

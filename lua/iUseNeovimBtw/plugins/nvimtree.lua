@@ -24,8 +24,10 @@ return {
 			-- 	"alpha",
 			-- },
 			filters = {
+				dotfiles = false,
+				git_ignored = false,
 				custom = { ".git" },
-				exclude = { ".gitignore" },
+				-- exclude = { ".gitignore" },
 			},
 			-- auto_close = true,
 			-- open_on_tab = false,
@@ -137,62 +139,3 @@ return {
 		})
 	end,
 }
-
--- return {
--- 	"nvim-neo-tree/neo-tree.nvim",
--- 	version = "*",
--- 	dependencies = {
--- 		"nvim-lua/plenary.nvim",
--- 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
--- 		"MunifTanjim/nui.nvim",
--- 	},
--- 	cmd = "Neotree",
--- 	keys = {
--- 		{ "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal" },
--- 	},
--- 	opts = {
--- 		icon = {
--- 			folder_closed = "",
--- 			folder_open = "",
--- 			folder_empty = "󰜌",
--- 			-- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
--- 			-- then these will never be used.
--- 			default = "*",
--- 			highlight = "NeoTreeFileIcon",
--- 		},
--- 		modified = {
--- 			symbol = "[✚]",
--- 			highlight = "NeoTreeModified",
--- 		},
--- 		name = {
--- 			trailing_slash = false,
--- 			use_git_status_colors = true,
--- 			highlight = "NeoTreeFileName",
--- 		},
--- 		git_status = {
--- 			symbols = {
---                              deleted="",
---                              renamed="凜",
---                              untracked="",
---                              ignored="",
---                              unstaged="",
---                              staged="",
---                              conflict="",
--- 			},
--- 		},
--- 		filesystem = {
--- 			window = {
--- 				mappings = {
--- 					["\\"] = "close_window",
--- 				},
--- 			},
--- 		},
--- 	},
--- }
-
--- (setup :neo-tree
---        {:use_popups_for_input true
---         :popup_border_style :solid
---         :window {:position :left :width 25}
---         :filesystem {:use_libuv_file_watcher true}
---         :default_component_configs {:indent {:with_markers false}
