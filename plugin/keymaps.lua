@@ -66,7 +66,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "hl", ":nohl<CR>", opts)
 
 -- make the current file executable
-keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
+keymap("n", "<leader>cx", ":!chmod +x %<CR>", { desc = "[C]ode e[X]ecutable", noremap = true, silent = true })
 
 -- i hate macros
 keymap("n", "q", "<Nop>", opts)
