@@ -22,6 +22,7 @@
   "hop.nvim": { "branch": "master", "commit": "efe58182f71fbe592f82fb211ab026f2819e855d" },
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
   "lazydev.nvim": { "branch": "main", "commit": "f59bd14a852ca43db38e3662395354cb2a9b13e0" },
+  "lazygit.nvim": { "branch": "main", "commit": "77a0d42943d8265271e6e6beaed72da54eeb17e7" },
   "lua-dev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "lualine.nvim": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
   "luvit-meta": { "branch": "main", "commit": "57d464c4acb5c2e66bd4145060f5dc9e96a7bbb7" },

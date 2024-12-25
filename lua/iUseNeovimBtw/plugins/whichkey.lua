@@ -52,6 +52,7 @@ return {
 				{ "<leader>d", group = "[D]ocument" },
 				{ "<leader>g", group = "[G]o" },
 				{ "<leader>h", group = "[H]arpoon" },
+				{ "<leader>l", group = "[L]azy" },
 				{ "<leader>r", group = "[R]ename" },
 				{ "<leader>s", group = "[S]earch" },
 				{ "<leader>t", group = "[T]oggle" },
