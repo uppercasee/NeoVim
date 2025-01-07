@@ -59,7 +59,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- -- NvimTreeToggle
+-- NvimTreeToggle
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- no highlight
@@ -70,23 +70,3 @@ keymap("n", "<leader>cx", ":!chmod +x %<CR>", { desc = "[C]ode e[X]ecutable", no
 
 -- i hate macros
 keymap("n", "q", "<Nop>", opts)
-
--- colorizer
-keymap(
-	"n",
-	"<leader>bc",
-	':lua require("nvim-highlight-colors").turnOn()<CR>',
-	{ desc = "[B]uffer Highlight [C]olor On", noremap = true, silent = true }
-)
-keymap(
-	"n",
-	"<leader>bf",
-	':lua require("nvim-highlight-colors").turnOff()<CR>',
-	{ desc = "[B]uffer Highlight O[f]f", noremap = true, silent = true }
-)
-keymap(
-	"n",
-	"<leader>bt",
-	':lua require("nvim-highlight-colors").toggle()<CR>',
-	{ desc = "[B]uffer Highlight [T]oggle", noremap = true, silent = true }
-)

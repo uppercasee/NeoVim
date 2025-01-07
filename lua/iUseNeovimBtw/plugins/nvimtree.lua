@@ -3,7 +3,19 @@ local icons = require("iUseNeovimBtw.icons")
 return {
 	"nvim-tree/nvim-tree.lua",
 	version = "*",
-	lazy = false,
+	lazy = true,
+	cmd = "NvimTreeToggle",
+	-- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+	keys = {
+		{
+			"<leader>e",
+			function()
+				require("nvim-tree")
+			end,
+			mode = "n",
+			desc = "[E]xplorer",
+		},
+	},
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},

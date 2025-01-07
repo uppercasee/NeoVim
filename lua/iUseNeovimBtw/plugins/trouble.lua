@@ -11,7 +11,7 @@ return {
 		{
 			"<leader>xX",
 			"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-			desc = "[x] Buffer Diagnostics",
+			desc = "[X] Buffer Diagnostics",
 		},
 		{
 			"<leader>xs",
@@ -21,7 +21,7 @@ return {
 		{
 			"<leader>xl",
 			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-			desc = "[x] [L]SP Definitions / references / ... ",
+			desc = "[x] [L]SP Definitions ",
 		},
 		{
 			"<leader>xL",

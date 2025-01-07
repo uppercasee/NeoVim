@@ -39,8 +39,8 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
 })
 
 -- Autocommand to turn on highlight colors
-vim.api.nvim_create_autocmd("BufReadPost", {
-    callback = function()
-        require("nvim-highlight-colors").turnOn()
-    end,
-})
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+--     callback = function()
+--         require("nvim-highlight-colors").turnOn()
+--     end,
+-- })
