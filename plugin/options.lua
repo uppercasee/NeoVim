@@ -7,8 +7,8 @@ opt.backup = false -- creates a backup file
 opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-opt.conceallevel=2 -- so that `` is visible in markdown files
-opt.concealcursor ='' -- conceal only on normal and command mode
+opt.conceallevel = 2 -- so that `` is visible in markdown files
+opt.concealcursor = "" -- conceal only on normal and command mode
 opt.hlsearch = true -- highlight all matches on previous search pattern
 opt.ignorecase = true -- ignore case in search patterns
 opt.mouse = "a" -- allow the mouse to be used in neovim
@@ -41,22 +41,23 @@ opt.scrolloff = 8 -- is one of my fav
 opt.sidescrolloff = 8
 opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 opt.title = true
+opt.foldmethod = "indent"
+opt.foldlevel = 99
+opt.wildmenu = true
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-opt.fillchars.eob = " "
-opt.fillchars = vim.opt.fillchars + "vertleft: "
-opt.fillchars = vim.opt.fillchars + "vertright: "
-opt.fillchars = vim.opt.fillchars + "eob: "
-opt.fillchars:append({
-	stl = " ",
-})
-
+opt.path:append("**")
 opt.shortmess:append("c")
 
-vim.cmd("set whichwrap+=<,>,[,],h,l")
-vim.cmd([[set iskeyword+=-]])
-vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
+opt.fillchars = {
+	eob = " ",
+	vertleft = " ",
+	vertright = " ",
+	stl = " ",
+}
+
+vim.opt.whichwrap:append("<,>,[,],h,l")
+vim.opt.iskeyword:append("-")
+vim.opt.formatoptions:remove("cro") -- TODO: this doesn't seem to work
 
 vim.filetype.add({
 	extension = {
@@ -66,4 +67,4 @@ vim.filetype.add({
 
 vim.loader.enable()
 
-vim.cmd([[highlight Normal guibg=none]])
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
