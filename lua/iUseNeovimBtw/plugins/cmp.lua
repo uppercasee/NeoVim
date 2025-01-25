@@ -32,6 +32,7 @@ return {
 			luasnip.config.setup({})
 
 			cmp.setup({
+				---@diagnostic disable-next-line: missing-fields
 				formatting = {
 					format = require("nvim-highlight-colors").format,
 				},
@@ -85,19 +86,12 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = {
-					{
-						name = "lazydev",
-						group_index = 0,
-					},
+					{ name = "lazydev", group_index = 0 },
 					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp_signature_help" },
 					{ name = "luasnip" },
 					{ name = "path" },
-					{
-						name = "buffer",
-						option = {
-							keyword_pattern = [[\k\+]],
-						},
-					},
+					{ name = "buffer", option = { keyword_pattern = [[\k\+]] } },
 				},
 			})
 			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).

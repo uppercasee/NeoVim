@@ -36,9 +36,9 @@ return {
 			-- 	"alpha",
 			-- },
 			filters = {
-				dotfiles = false,
+				dotfiles = true,
 				git_ignored = false,
-				custom = { ".git" },
+				custom = { "^.git$" },
 				-- exclude = { ".gitignore" },
 			},
 			-- auto_close = true,
@@ -127,7 +127,7 @@ return {
 			--   custom = {},
 			-- },
 			git = {
-				enable = true,
+        enable = true,
 				ignore = true,
 				timeout = 500,
 			},

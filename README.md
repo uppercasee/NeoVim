@@ -21,7 +21,6 @@
 
 ---
 
-![](./assets/neovim_dashboard.png)
 ![](./assets/neovim_editor.png)
 
 ---

@@ -55,9 +55,9 @@ opt.fillchars = {
 	stl = " ",
 }
 
-vim.opt.whichwrap:append("<,>,[,],h,l")
-vim.opt.iskeyword:append("-")
-vim.opt.formatoptions:remove("cro") -- TODO: this doesn't seem to work
+opt.whichwrap:append("<,>,[,],h,l")
+opt.iskeyword:append("-")
+opt.formatoptions:remove("cro")
 
 vim.filetype.add({
 	extension = {
