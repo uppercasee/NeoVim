@@ -41,7 +41,7 @@
 
 - **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Statusline plugin.
 - **[nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)**: File explorer.
-- **[bufferline.nvim](https://github.com/akinsho/bufferline.nvim)**: Tab-like buffer management.
+<!-- - **[bufferline.nvim](https://github.com/akinsho/bufferline.nvim)**: Tab-like buffer management. -->
 - **[which-key.nvim](https://github.com/folke/which-key.nvim)**: Displays available keybindings.
 
 ### Colorschemes
@@ -70,7 +70,7 @@
 
 - **[harpoon](https://github.com/ThePrimeagen/harpoon)**: Quick navigation between files.
 - **[todo-comments.nvim](https://github.com/folke/todo-comments.nvim)**: Highlight and manage TODO comments.
-- **[dashboard-nvim](https://github.com/glepnir/dashboard-nvim)**: Start screen for Neovim.
+<!-- - **[dashboard-nvim](https://github.com/glepnir/dashboard-nvim)**: Start screen for Neovim. -->
 - **[trouble.nvim](https://github.com/folke/trouble.nvim)**: Diagnostic and quickfix viewer.
 - **[hop.nvim](https://github.com/phaazon/hop.nvim)**: Easy motion for jumping around the buffer.
 
